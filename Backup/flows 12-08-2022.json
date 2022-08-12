@@ -1,0 +1,379 @@
+[
+    {
+        "id": "34c9f9b8dfea7642",
+        "type": "tab",
+        "label": "GeneradorDatosMock",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b1ac06542da0d53a",
+        "type": "tab",
+        "label": "DataEngine",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "030f77e102944776",
+        "type": "mqtt-broker",
+        "name": "VM eMozart",
+        "broker": "172.16.200.104",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fd4683e7167ffc59",
+        "type": "mqtt in",
+        "z": "34c9f9b8dfea7642",
+        "name": "Broker VM eMozart",
+        "topic": "test",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "030f77e102944776",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "6a6b5645eed53aa4"
+            ]
+        ]
+    },
+    {
+        "id": "6a6b5645eed53aa4",
+        "type": "debug",
+        "z": "34c9f9b8dfea7642",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "9dddc289dc0d08f4",
+        "type": "mqtt out",
+        "z": "34c9f9b8dfea7642",
+        "name": "Broker VM eMozart",
+        "topic": "test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "030f77e102944776",
+        "x": 730,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "9a1d31c97fdbe227",
+        "type": "inject",
+        "z": "34c9f9b8dfea7642",
+        "name": "",
+        "props": [],
+        "repeat": "0.001",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 260,
+        "wires": [
+            [
+                "506b8f64e96c9808"
+            ]
+        ]
+    },
+    {
+        "id": "506b8f64e96c9808",
+        "type": "function",
+        "z": "34c9f9b8dfea7642",
+        "name": "GeneradorDatosMock",
+        "func": "const MIN = 1;\nconst MAX = 99;\nfunction getRandomInt(min = MIN, max = MAX) {\n    min = Math.ceil(min);\n    max = Math.floor(max);\n    return Math.floor(Math.random() * (max - min)) + min;\n}\n\nfunction generateRandomDecimalInRangeFormatted(min, max, places) {\n    let value = (Math.random() * (max - min + 1)) + min;\n    return Number.parseFloat(value).toFixed(places);\n}\n\nlet value1 = getRandomInt(10000, 90000);\nlet value2 = generateRandomDecimalInRangeFormatted(-31.835612, -31.952209, 6);\nlet value3 = generateRandomDecimalInRangeFormatted(-62.272098, -62.472255, 6);\n\nvar currentdate = new Date();\nvar datetime = currentdate.getDate() + \"/\"\n    + (currentdate.getMonth() + 1) + \"/\"\n    + currentdate.getFullYear() + \"-\"\n    + currentdate.getHours() + \":\"\n    + currentdate.getMinutes() + \":\"\n    + currentdate.getSeconds();\n\nvar value4 = \"\";\nvalue4 = value4 + value1 +\",\"+ value1 + \",\" + value2 + \"/\" + value3 + \",\" + datetime;\nmsg.payload = value4;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "5b70166b7478473a"
+            ]
+        ]
+    },
+    {
+        "id": "5b70166b7478473a",
+        "type": "batcher",
+        "z": "34c9f9b8dfea7642",
+        "name": "",
+        "maxTopics": 1,
+        "maxMessagesPerTopic": "5000",
+        "maxDelay": -1,
+        "x": 540,
+        "y": 320,
+        "wires": [
+            [
+                "9dddc289dc0d08f4"
+            ]
+        ]
+    },
+    {
+        "id": "3d957aca8114e220",
+        "type": "inject",
+        "z": "34c9f9b8dfea7642",
+        "name": "",
+        "props": [],
+        "repeat": "0.001",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "506b8f64e96c9808"
+            ]
+        ]
+    },
+    {
+        "id": "b8f52baef420c7f5",
+        "type": "inject",
+        "z": "34c9f9b8dfea7642",
+        "name": "",
+        "props": [],
+        "repeat": "0.001",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 380,
+        "wires": [
+            [
+                "506b8f64e96c9808"
+            ]
+        ]
+    },
+    {
+        "id": "adf903ec55378755",
+        "type": "inject",
+        "z": "34c9f9b8dfea7642",
+        "name": "",
+        "props": [],
+        "repeat": "0.001",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "506b8f64e96c9808"
+            ]
+        ]
+    },
+    {
+        "id": "28acbce613de4783",
+        "type": "http request",
+        "z": "b1ac06542da0d53a",
+        "name": "GET Token",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "body",
+        "url": "https://iam.cloud.ibm.com/identity/token",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "Authorization",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "Basic Yng6Yng="
+            },
+            {
+                "keyType": "Content-Type",
+                "keyValue": "",
+                "valueType": "other",
+                "valueValue": "application/x-www-form-urlencoded"
+            }
+        ],
+        "x": 370,
+        "y": 100,
+        "wires": [
+            [
+                "61a283dc345f8eb1",
+                "18a20f8524115c3f"
+            ]
+        ]
+    },
+    {
+        "id": "361285b9e787bbfc",
+        "type": "inject",
+        "z": "b1ac06542da0d53a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "apikey=QZ-vn3FxxovGrBBiTnq0SfzV1HSDaXWvckyuVWZfwY9O&grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey",
+        "payloadType": "str",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "28acbce613de4783"
+            ]
+        ]
+    },
+    {
+        "id": "61a283dc345f8eb1",
+        "type": "debug",
+        "z": "b1ac06542da0d53a",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "18a20f8524115c3f",
+        "type": "function",
+        "z": "b1ac06542da0d53a",
+        "name": "extractToken",
+        "func": "//convierto la respuesta en string y la guardo en la variable response \nlet response = msg.payload.toString();\n//busco el indice en donde termina el token\nlet indice = response.indexOf('\"refresh_token\":\"') - 2;\n//busco el token y lo guardo en la variable token\nlet bearer = 'Bearer ';\nlet token = bearer.concat(response.substring(17, indice));\n//guardo el token en la variable por defecto\nmsg.token = token;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "655733b2cc406836",
+                "c250ab565a236e80"
+            ]
+        ]
+    },
+    {
+        "id": "655733b2cc406836",
+        "type": "debug",
+        "z": "b1ac06542da0d53a",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "token",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c250ab565a236e80",
+        "type": "http request",
+        "z": "b1ac06542da0d53a",
+        "name": "GET Nodes",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.dataengine.cloud.ibm.com/v3/sql_jobs?type=stream&instance_crn=crn:v1:bluemix:public:sql-query:us-south:a/285efe128d0a4273a2c87377df705764:9616ce68-a0f1-485b-b9f1-00fc11913e10::",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Accept",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Authorization",
+                "valueType": "msg",
+                "valueValue": "token"
+            }
+        ],
+        "x": 830,
+        "y": 320,
+        "wires": [
+            [
+                "b39e30d553a296ec"
+            ]
+        ]
+    },
+    {
+        "id": "b39e30d553a296ec",
+        "type": "debug",
+        "z": "b1ac06542da0d53a",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 320,
+        "wires": []
+    }
+]
