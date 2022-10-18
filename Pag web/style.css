@@ -1,0 +1,20 @@
+body {
+    background-color: #696969;
+}   
+
+h1 {
+    color: azure;
+    text-align: center;
+    font-family: Arvo;
+    font-size: 50px;
+}
+img {
+    float: right;
+    width: 140px;
+}
+p {
+    color: white;
+}
+div {
+    color: white;
+}
