@@ -1,3 +1,5 @@
+const ObjectsToCsv = require('objects-to-csv');
+
 function generateRandomDecimalInRangeFormatted(min, max, places) {
   let value = Math.random() * (max - min + 1) + min;
   return Number.parseFloat(value).toFixed(places);
@@ -57,5 +59,13 @@ for (var i = 0; i <= 10; i++) {
   ubicaciones.push(foo);
 }
 
-msg.payload = "{" + foo.toString() + "}";
-return msg;
+
+(async () => {
+  const csv = new ObjectsToCsv(ubicaciones);
+ 
+  // Save to file:
+  await csv.toDisk('/test.csv');
+ 
+  // Return the CSV file as string:
+  console.log(await csv.toString());
+})();
