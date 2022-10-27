@@ -1,3 +1,5 @@
+const ObjectsToCsv = require('objects-to-csv');
+
 function generateRandomDecimalInRangeFormatted(min, max, places = 6) {
     let value = Math.random() * (max - min + 1) + min;
     return Number.parseFloat(value).toFixed(places);
@@ -10,7 +12,7 @@ function editarUbicacion(ub, places = 6, min = 0.000025, max = 0.000025) {
 }
 
 function obtenerDateTimeFormateado(){
-    let currentdate = new Date()
+    let currentdate = new Date();
     let dtime =
         currentdate.getDate() +
         "/" +
@@ -39,16 +41,16 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 10,
     let lon;
   
     for (let i = id_min; i <= id_max; i++) {
-      lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
-      lon = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
-  
-      foo.push({
-        idSensor: i,
-        idVaca: i,
-        latitud: lat,
-        longitud: lon,
-        dateTime: obtenerDateTimeFormateado(),
-      });
+        lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
+        lon = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
+
+        foo.push({
+            idSensor: i,
+            idVaca: i,
+            latitud: lat,
+            longitud: lon,
+            dateTime: obtenerDateTimeFormateado(),
+        });
     }
     return foo;
 }
@@ -58,7 +60,7 @@ function modificarListaUbicaciones(ub){
      * Genera una nueva lista de ubicaciones a partir de una lista existente
      * @param {Array} ub    Lista original
      *  */
-    let nueva_lista = []
+    let nueva_lista = [];
     for (let i = 0; i < ub.length; i++) {
         let nueva_latitud = editarUbicacion(ub[i].latitud);
         let nueva_longitud = editarUbicacion(ub[i].longitud);
@@ -73,3 +75,25 @@ function modificarListaUbicaciones(ub){
     }
     return nueva_lista;
 }
+
+function generarUbicacionesCSV(n_vacas = 10, n_listas = 10, filename = './test.csv') {
+    /**
+     * Genera listas de ubicaciones de vacas y las guarda en un .csv
+     * @param {int} n_vacas         Cantidad de vacas
+     * @param {int} n_listas        Cantidad de listas
+     * @param {string} filename     Nombre del archivo destino
+     */
+    let lista = nuevaListaUbicaciones(1, n_vacas);
+
+    for(let i = 1; i < n_listas; i++){
+        (async () => {
+            const csv = new ObjectsToCsv(lista);
+           
+            // Save to file:
+            await csv.toDisk(filename, { append: true });
+        })();
+        lista = modificarListaUbicaciones(lista);
+    }
+}
+
+generarUbicacionesCSV(10, 5, './test.csv');
