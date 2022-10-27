@@ -1,5 +1,3 @@
-const ObjectsToCsv = require('objects-to-csv');
-
 function generateRandomDecimalInRangeFormatted(min, max, places = 6) {
     let value = Math.random() * (max - min + 1) + min;
     return Number.parseFloat(value).toFixed(places);
@@ -11,19 +9,9 @@ function editarUbicacion(ub, places = 6, min = 0.000025, max = 0.000025) {
     return result;
 }
 
-function nuevaListaUbicaciones(id_min = 0, id_max = 500,
-     lat_min = -31.835612, lat_max = -31.952209,
-     lon_min = -62.272098, lon_max = -62.472255) {
-    // Genera una lista de ubicaciones aleatorias asociadas a ids.
-    // La lista va desde id_min hasta id_max inclusive
-    // 
-    let foo = [];
-    let lat;
-    let lon;
-  
-    for (let i = id_min; i <= id_max; i++) {
-      currentdate = new Date();
-      datetime =
+function obtenerDateTimeFormateado(){
+    let currentdate = new Date()
+    let dtime =
         currentdate.getDate() +
         "/" +
         (currentdate.getMonth() + 1) +
@@ -35,6 +23,22 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 500,
         currentdate.getMinutes() +
         ":" +
         currentdate.getSeconds();
+    return dtime
+}
+
+function nuevaListaUbicaciones(id_min = 0, id_max = 10,
+     lat_min = -31.835612, lat_max = -31.952209,
+     lon_min = -62.272098, lon_max = -62.472255) {
+    /** 
+    * Genera una lista de ubicaciones aleatorias asociadas a ids.
+    * @param {int} id_min   Primer id asociado
+    * @param {int} id_max   Último id asociado
+    */ 
+    let foo = [];
+    let lat;
+    let lon;
+  
+    for (let i = id_min; i <= id_max; i++) {
       lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
       lon = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
   
@@ -43,13 +47,17 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 500,
         idVaca: i,
         latitud: lat,
         longitud: lon,
-        dataTime: datetime,
+        dateTime: obtenerDateTimeFormateado(),
       });
     }
     return foo;
 }
 
 function modificarListaUbicaciones(ub){
+    /**
+     * Genera una nueva lista de ubicaciones a partir de una lista existente
+     * @param {Array} ub    Lista original
+     *  */
     let nueva_lista = []
     for (let i = 0; i < ub.length; i++) {
         let nueva_latitud = editarUbicacion(ub[i].latitud);
@@ -59,17 +67,9 @@ function modificarListaUbicaciones(ub){
             idVaca: ub[i].idVaca,
             latitud: nueva_latitud,
             longitud: nueva_longitud,
-            dateTime: datetime,
+            dateTime: obtenerDateTimeFormateado(),
         }; 
         nueva_lista.push(foo);
     }
     return nueva_lista;
-}
-
-let ubicaciones = nuevaListaUbicaciones(10, 20);
-let ubicaciones2 = modificarListaUbicaciones(ubicaciones);
-
-for(let i = 0; i < ubicaciones.length; i++){
-    console.log("Latitud A: " + ubicaciones[i].latitud + " Latitud B: " + ubicaciones2[i].latitud );
-    console.log("Longitud A: " + ubicaciones[i].longitud + " Longitud B: " + ubicaciones2[i].longitud );
 }
