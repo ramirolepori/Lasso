@@ -18,8 +18,8 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 500,
     // La lista va desde id_min hasta id_max inclusive
     // 
     let foo = [];
-    let latitud;
-    let longitud;
+    let lat;
+    let lon;
   
     for (let i = id_min; i <= id_max; i++) {
       currentdate = new Date();
@@ -35,14 +35,14 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 500,
         currentdate.getMinutes() +
         ":" +
         currentdate.getSeconds();
-      latitud = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
-      longitud = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
+      lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
+      lon = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
   
       foo.push({
         idSensor: i,
         idVaca: i,
-        ubicacionX: latitud,
-        ubicacionY: longitud,
+        latitud: lat,
+        longitud: lon,
         dataTime: datetime,
       });
     }
@@ -52,13 +52,13 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 500,
 function modificarListaUbicaciones(ub){
     let nueva_lista = []
     for (let i = 0; i < ub.length; i++) {
-        let nueva_ubicacionX = editarUbicacion(ub[i].ubicacionX, 6);
-        let nueva_ubicacionY = editarUbicacion(ub[i].ubicacionY, 6);
+        let nueva_latitud = editarUbicacion(ub[i].latitud);
+        let nueva_longitud = editarUbicacion(ub[i].longitud);
         let foo = {
             idSensor: ub[i].idSensor,
             idVaca: ub[i].idVaca,
-            ubicacionX: nueva_ubicacionX,
-            ubicacionY: nueva_ubicacionY,
+            latitud: nueva_latitud,
+            longitud: nueva_longitud,
             dateTime: datetime,
         }; 
         nueva_lista.push(foo);
@@ -70,6 +70,6 @@ let ubicaciones = nuevaListaUbicaciones(10, 20);
 let ubicaciones2 = modificarListaUbicaciones(ubicaciones);
 
 for(let i = 0; i < ubicaciones.length; i++){
-    console.log("UbicacionX A: " + ubicaciones[i].ubicacionX + " UbicacionX B: " + ubicaciones2[i].ubicacionX );
-    console.log("UbicacionY A: " + ubicaciones[i].ubicacionY + " UbicacionY B: " + ubicaciones2[i].ubicacionY );
+    console.log("Latitud A: " + ubicaciones[i].latitud + " Latitud B: " + ubicaciones2[i].latitud );
+    console.log("Longitud A: " + ubicaciones[i].longitud + " Longitud B: " + ubicaciones2[i].longitud );
 }
