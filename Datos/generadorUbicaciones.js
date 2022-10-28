@@ -1,4 +1,4 @@
-const ObjectsToCsv = require('objects-to-csv');
+const fs = require('fs');
 
 function generateRandomDecimalInRangeFormatted(min, max, places = 6) {
     let value = Math.random() * (max - min + 1) + min;
@@ -49,7 +49,7 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 10,
             idVaca: i,
             latitud: lat,
             longitud: lon,
-            dateTime: obtenerDateTimeFormateado(),
+            dateTime: new Date().toISOString(),
         });
     }
     return foo;
@@ -64,36 +64,70 @@ function modificarListaUbicaciones(ub){
     for (let i = 0; i < ub.length; i++) {
         let nueva_latitud = editarUbicacion(ub[i].latitud);
         let nueva_longitud = editarUbicacion(ub[i].longitud);
+        let anterior_fecha = new Date(ub[i].dateTime);
+        anterior_fecha.setMinutes(anterior_fecha.getMinutes() + 5);
+        let nueva_fecha = anterior_fecha.toISOString();
         let foo = {
             idSensor: ub[i].idSensor,
             idVaca: ub[i].idVaca,
             latitud: nueva_latitud,
             longitud: nueva_longitud,
-            dateTime: obtenerDateTimeFormateado(),
+            dateTime: nueva_fecha,
         }; 
         nueva_lista.push(foo);
     }
     return nueva_lista;
 }
 
-function generarUbicacionesCSV(n_vacas = 10, n_listas = 10, filename = './test.csv') {
+function generarUbicaciones(n_listas = 10, n_vacas = 10) {
     /**
      * Genera listas de ubicaciones de vacas y las guarda en un .csv
      * @param {int} n_vacas         Cantidad de vacas
      * @param {int} n_listas        Cantidad de listas
-     * @param {string} filename     Nombre del archivo destino
      */
-    let lista = nuevaListaUbicaciones(1, n_vacas);
+    let ubs = [];
+    ubs.push(nuevaListaUbicaciones(1, n_vacas));
 
-    for(let i = 1; i < n_listas; i++){
-        (async () => {
-            const csv = new ObjectsToCsv(lista);
-           
-            // Save to file:
-            await csv.toDisk(filename, { append: true });
-        })();
-        lista = modificarListaUbicaciones(lista);
+    for(let i = 0; i < n_listas; i++){
+        ubs.push(modificarListaUbicaciones(ubs[i]));
     }
+    return ubs;
 }
 
-generarUbicacionesCSV(10, 5, './test.csv');
+function generarCSVString(lista, filename = './test.csv'){
+    let csvList = []
+    csvList = lista.map(item => [
+        item.idSensor,
+        item.idVaca,
+        item.latitud,
+        item.longitud,
+        item.dateTime
+    ]);
+    csvList.unshift([
+        "ID Sensor",
+        "ID Vaca",
+        "Latitud",
+        "Longitud",
+        "Fecha/Hora"
+    ]);
+
+    return csvList.map(item => item.join(","))
+           .join("\n");
+}
+
+/**
+ * Datos de prueba:
+ * Área de 25k hectáreas arpoximadamente
+ * Cerca de 1 vaca por hectárea
+ */
+
+let ubicaciones = generarUbicaciones(10, 1000);
+let lista = [];
+for(let i = 0; i < ubicaciones.length; i++){
+    lista = lista.concat(ubicaciones[i]);
+}
+let csvString = generarCSVString(lista);
+fs.writeFile('test.csv', csvString, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+  });
