@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { exit } = require('process');
 
 function generateRandomDecimalInRangeFormatted(min, max, places = 6) {
     let value = Math.random() * (max - min + 1) + min;
@@ -6,6 +7,12 @@ function generateRandomDecimalInRangeFormatted(min, max, places = 6) {
 }
 
 function editarUbicacion(ub, places = 6, min = 0.000025, max = 0.000025) {
+    /**
+     * Genera un nuevo valor de longitud o latitud a partir de un valor base.
+     * El valor es modificado por un numero al azar tal que min <= x <= max
+     * @param {String|Number} ub           El valor base a modificar
+     * @param {Number}        places       La cantidad de decimales del valor a obtener
+     */
     let value = Number(ub) + (Math.random() * (max - min) + min);
     let result = Number.parseFloat(value).toFixed(places);
     return result;
@@ -43,13 +50,14 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 10,
     for (let i = id_min; i <= id_max; i++) {
         lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
         lon = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
-
+        let fecha  = new Date();
+        fecha.setHours(fecha.getHours() - 3);  // Restamos 3 horas por el uso horario
         foo.push({
             idSensor: i,
             idVaca: i,
             latitud: lat,
             longitud: lon,
-            dateTime: new Date().toISOString(),
+            dateTime: fecha.toISOString(),
         });
     }
     return foo;
@@ -65,6 +73,7 @@ function modificarListaUbicaciones(ub){
         let nueva_latitud = editarUbicacion(ub[i].latitud);
         let nueva_longitud = editarUbicacion(ub[i].longitud);
         let anterior_fecha = new Date(ub[i].dateTime);
+        // Modificar la siguiente línea para cambiar el intervalo de tiempo
         anterior_fecha.setMinutes(anterior_fecha.getMinutes() + 5);
         let nueva_fecha = anterior_fecha.toISOString();
         let foo = {
@@ -94,7 +103,11 @@ function generarUbicaciones(n_listas = 10, n_vacas = 10) {
     return ubs;
 }
 
-function generarCSVString(lista, filename = './test.csv'){
+function generarCSVString(lista){
+    /**
+     * Genera un string formateado para CSV a partir de una lista de Ubicaciones
+     * @param {Array} lista     La lista a partir de la cual se genera el string
+     */
     let csvList = []
     csvList = lista.map(item => [
         item.idSensor,
@@ -116,12 +129,25 @@ function generarCSVString(lista, filename = './test.csv'){
 }
 
 /**
- * Datos de prueba:
- * Área de 25k hectáreas arpoximadamente
- * Cerca de 1 vaca por hectárea
+ * Usage: Se debe ejecutar el script con 2 argumentos
+ * El primero es la cantidad de ubicaciones a generar por vaca
+ * El segundo es la cantidad de vacas
+ * 
+ * Ejemplo: Si los argumentos son 5 y 10, se generarán 5 listas de ubicaciones
+ * de 10 vacas cada una.
+ * 
+ * 
+ * El resultado se guarda en 'test.csv'
  */
 
-let ubicaciones = generarUbicaciones(10, 1000);
+if(process.argv.length != 4){
+    console.log("Error! Se necesitan 2 argumentos");
+    exit();
+}
+let n_listas = process.argv[2];
+let n_vacas = process.argv[3];
+
+let ubicaciones = generarUbicaciones(n_listas, n_vacas);
 let lista = [];
 for(let i = 0; i < ubicaciones.length; i++){
     lista = lista.concat(ubicaciones[i]);
@@ -130,4 +156,4 @@ let csvString = generarCSVString(lista);
 fs.writeFile('test.csv', csvString, function (err) {
     if (err) throw err;
     console.log('Saved!');
-  });
+});
