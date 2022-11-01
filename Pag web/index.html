@@ -3,6 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="icon" href="src/Logo/ICONO-EMOZART BLANCO PNG.png" sizes="32x32">
     <meta charset="UTF-8">
@@ -11,7 +12,87 @@
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>Lasso</title>
 </head>
-<body>
+<body>    
+    <div class="wrapper">
+        <!--Top menu -->    
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hideButton">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>    
+        <div class="sidebar">            
+           <!--profile image & text-->
+           <div class="profile">
+            <img src="./src/Logo/LOGO-EMOZART PNG.png" alt="profile_picture">
+            <h3>Nombre Usuario</h3>
+            <p>Encargado</p>
+        </div>
+            <!--menu item-->
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">PRINCIPAL</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">MAPA</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">LISTA DE SENSORES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">INFORMACION DEL SENSOR</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-chart-line"></i></span>
+                        <span class="item">REPORTES</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-shield"></i></span>
+                        <span class="item">ADMIN</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">CONFIGURACION</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+  <script>
+    var hamburger = document.querySelector(".hideButton");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+  </script>
+
+
     <header>
         <div>CONFIGURACIóN USUARIO</div>
         <div>
