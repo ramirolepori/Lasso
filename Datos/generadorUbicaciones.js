@@ -50,13 +50,14 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 10,
     for (let i = id_min; i <= id_max; i++) {
         lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
         lon = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
-
+        let fecha  = new Date();
+        fecha.setHours(fecha.getHours() - 3);  // Restamos 3 horas por el uso horario
         foo.push({
             idSensor: i,
             idVaca: i,
             latitud: lat,
             longitud: lon,
-            dateTime: new Date().toISOString(),
+            dateTime: fecha.toISOString(),
         });
     }
     return foo;
@@ -138,7 +139,6 @@ function generarCSVString(lista){
  * 
  * El resultado se guarda en 'test.csv'
  */
-
 
 if(process.argv.length != 4){
     console.log("Error! Se necesitan 2 argumentos");
