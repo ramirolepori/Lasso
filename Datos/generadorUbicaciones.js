@@ -102,7 +102,7 @@ function generarUbicaciones(n_listas = 10, n_vacas = 10) {
     let ubs = [];
     ubs.push(nuevaListaUbicaciones(1, n_vacas));
 
-    for(let i = 0; i < n_listas; i++){
+    for(let i = 1; i < n_listas; i++){
         ubs.push(modificarListaUbicaciones(ubs[i]));
     }
     return ubs;
