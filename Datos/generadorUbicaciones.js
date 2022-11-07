@@ -2,11 +2,11 @@ const fs = require('fs');
 const { exit } = require('process');
 
 function generateRandomDecimalInRangeFormatted(min, max, places = 6) {
-    let value = Math.random() * (max - min + 1) + min;
+    let value = Math.random() * (max - min) + min;
     return Number.parseFloat(value).toFixed(places);
 }
 
-function editarUbicacion(ub, places = 6, min = 0.000025, max = 0.000025) {
+function editarUbicacion(ub, places = 6, min = -0.000025, max = 0.000025) {
     /**
      * Genera un nuevo valor de longitud o latitud a partir de un valor base.
      * El valor es modificado por un numero al azar tal que min <= x <= max
@@ -19,6 +19,10 @@ function editarUbicacion(ub, places = 6, min = 0.000025, max = 0.000025) {
 }
 
 function obtenerDateTimeFormateado(){
+    /**
+     * Devuelve una string que representa una fecha en formato dd/mm/aaaa-HH:MM:SS
+     * Actualmente no se utiliza
+     */
     let currentdate = new Date();
     let dtime =
         currentdate.getDate() +
@@ -36,8 +40,8 @@ function obtenerDateTimeFormateado(){
 }
 
 function nuevaListaUbicaciones(id_min = 0, id_max = 10,
-     lat_min = -31.835612, lat_max = -31.952209,
-     lon_min = -62.272098, lon_max = -62.472255) {
+     lon_min = -62.472255, lon_max = -62.272098,
+     lat_min = -31.952209, lat_max = -31.835612) {
     /** 
     * Genera una lista de ubicaciones aleatorias asociadas a ids.
     * @param {int} id_min   Primer id asociado
@@ -48,15 +52,15 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 10,
     let lon;
   
     for (let i = id_min; i <= id_max; i++) {
-        lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
         lon = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
+        lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
         let fecha  = new Date();
         fecha.setHours(fecha.getHours() - 3);  // Restamos 3 horas por el uso horario
         foo.push({
             idSensor: i,
             idVaca: i,
-            latitud: lat,
             longitud: lon,
+            latitud: lat,
             dateTime: fecha.toISOString(),
         });
     }
@@ -67,11 +71,11 @@ function modificarListaUbicaciones(ub){
     /**
      * Genera una nueva lista de ubicaciones a partir de una lista existente
      * @param {Array} ub    Lista original
-     *  */
+     **/
     let nueva_lista = [];
     for (let i = 0; i < ub.length; i++) {
-        let nueva_latitud = editarUbicacion(ub[i].latitud);
         let nueva_longitud = editarUbicacion(ub[i].longitud);
+        let nueva_latitud = editarUbicacion(ub[i].latitud);
         let anterior_fecha = new Date(ub[i].dateTime);
         // Modificar la siguiente línea para cambiar el intervalo de tiempo
         anterior_fecha.setMinutes(anterior_fecha.getMinutes() + 5);
@@ -79,8 +83,8 @@ function modificarListaUbicaciones(ub){
         let foo = {
             idSensor: ub[i].idSensor,
             idVaca: ub[i].idVaca,
-            latitud: nueva_latitud,
             longitud: nueva_longitud,
+            latitud: nueva_latitud,
             dateTime: nueva_fecha,
         }; 
         nueva_lista.push(foo);
@@ -90,7 +94,8 @@ function modificarListaUbicaciones(ub){
 
 function generarUbicaciones(n_listas = 10, n_vacas = 10) {
     /**
-     * Genera listas de ubicaciones de vacas y las guarda en un .csv
+     * Genera listas de ubicaciones de vacas.
+     * Cada lista describe la ubicacion de cada vaca en un momento determinado.
      * @param {int} n_vacas         Cantidad de vacas
      * @param {int} n_listas        Cantidad de listas
      */
@@ -105,22 +110,22 @@ function generarUbicaciones(n_listas = 10, n_vacas = 10) {
 
 function generarCSVString(lista){
     /**
-     * Genera un string formateado para CSV a partir de una lista de Ubicaciones
+     * Genera un string formateado para CSV a partir de una lista de ubicaciones.
      * @param {Array} lista     La lista a partir de la cual se genera el string
      */
     let csvList = []
     csvList = lista.map(item => [
         item.idSensor,
         item.idVaca,
-        item.latitud,
         item.longitud,
+        item.latitud,
         item.dateTime
     ]);
     csvList.unshift([
         "ID Sensor",
         "ID Vaca",
-        "Latitud",
         "Longitud",
+        "Latitud",
         "Fecha/Hora"
     ]);
 
@@ -150,10 +155,16 @@ let n_vacas = process.argv[3];
 let ubicaciones = generarUbicaciones(n_listas, n_vacas);
 let lista = [];
 for(let i = 0; i < ubicaciones.length; i++){
+    // Concatenamos las listas de ubicaciones en una sola lista
     lista = lista.concat(ubicaciones[i]);
 }
+
+// console.log(obtenerDateTimeFormateado());
+
+
 let csvString = generarCSVString(lista);
 fs.writeFile('test.csv', csvString, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
+
