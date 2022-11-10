@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="src/Logo/ICONO-EMOZART BLANCO PNG.png" sizes="32x32">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,25 +14,38 @@
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>Lasso</title>
 </head>
-<body>    
+
+<body>
+    <script src="./Script/scripts.js"></script>
     <div class="wrapper">
-        <!--Top menu -->    
+        <!--Top menu -->
         <div class="section">
             <div class="top_navbar">
-                <div class="hideButton">
+                <div class="hideButton" onclick="myFunction()">
                     <a href="#">
                         <i class="fas fa-bars"></i>
                     </a>
                 </div>
+                <!--body here -->
+                <header>
+                    <img class="logo" src="./src/Logo/LOGO-EMOZART PNG.png" alt="logo" height="100px" width="300px">
+                </header>
+                <main>
+                    <h1>CONTENIDO</h1>
+                </main>
+                <footer>
+                    <p>Desarrollado por Lasso S.A.</p>
+                    <p>&copy; 2022 Lasso S.A.</p>
+                </footer>
             </div>
-        </div>    
-        <div class="sidebar">            
-           <!--profile image & text-->
-           <div class="profile">
-            <img src="./src/Logo/LOGO-EMOZART PNG.png" alt="profile_picture">
-            <h3>Nombre Usuario</h3>
-            <p>Encargado</p>
         </div>
+        <div class="sidebar">
+            <!--profile image & text-->
+            <div class="profile">
+                <img src="./src/Logo/LOGO-EMOZART PNG.png" alt="profile_picture">
+                <h3>Nombre Usuario</h3>
+                <p>Encargado</p>
+            </div>
             <!--menu item-->
             <ul>
                 <li>
@@ -85,30 +100,6 @@
         </div>
 
     </div>
-  <script>
-    var hamburger = document.querySelector(".hideButton");
-    hamburger.addEventListener("click", function(){
-        document.querySelector("body").classList.toggle("active");
-    })
-  </script>
-
-
-    <header>
-        <div>CONFIGURACIóN USUARIO</div>
-        <div>
-            <img class="logo" src="./src/Logo/LOGO-EMOZART PNG.png" alt="logo">
-            <h1>Lasso</h1>
-        </div>
-        
-    </header>
-    <main>
-        <div class="map">MAPA</div>
-        <div class="list">LISTA DE SENSORES</div>
-        <div class="info">INFORMACIÓN DEL SESOR SELECCIONADO</div>
-    </main>
-    <footer>
-        <p>Desarrollado por Lasso S.A.</p>
-        <p>&copy; 2022 Lasso S.A.</p>
-    </footer>
 </body>
+
 </html>
