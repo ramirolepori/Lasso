@@ -128,3 +128,23 @@ body.active .wrapper .section{
   margin-left: 0;
   width: 100%;
 }
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+.logo{
+  margin-left: 65%;
+  margin-top: -30px;
+}
