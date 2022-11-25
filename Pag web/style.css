@@ -21,6 +21,12 @@ div {
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+
+:root {
+  --lightblue: rgb(7, 105, 185);;
+  --blue: rgb(5, 68, 104);
+  --white: rgb(241, 237, 237);
+}
 *{
     list-style: none;
     text-decoration: none;
@@ -31,11 +37,11 @@ div {
 }
 
 body{
-    background: #f5f6fa;
+    background: var(--white);
 }
 
 .wrapper .sidebar{
-    background: rgb(5, 68, 104);
+    background: var(--blue);
     position: fixed;
     top: 0;
     left: 0;
@@ -58,7 +64,7 @@ body{
 }
 
 .wrapper .sidebar .profile h3{
-  color: #ffffff;
+  color:var(--white);
   margin: 10px 0 5px;
 }
 
@@ -70,7 +76,7 @@ body{
   display: block;
   padding: 13px 30px;
   border-bottom: 1px solid #10558d;
-  color: rgb(241, 237, 237);
+  color: var(--white);
   font-size: 16px;
   position: relative;
 }
@@ -85,7 +91,7 @@ body{
     color: #0c7db1;
 
     background:white;
-    border-right: 2px solid rgb(5, 68, 104);
+    border-right: 2px solid var(--blue);
 }
 
 .wrapper .sidebar ul li a:hover .icon,
@@ -104,7 +110,7 @@ body{
 }
 
 .wrapper .section .top_navbar{
-  background: rgb(7, 105, 185);
+  background: var(--lightblue);
   height: 120px;
   display: flexbox;
   align-items: center;
@@ -120,6 +126,35 @@ body{
 .wrapper .section .top_navbar .hideButton a:hover{
   color: #a2ecff;
 }
+
+.alerts{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.alert{
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  width: 200px;
+  border: 5px solid var(--lightblue);
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+}
+.alertTitle{
+  height: 35px;
+  border-bottom: 3px solid var(--lightblue);
+  padding: 5px;
+  text-align: center;
+}
+
+.alertContent{
+  height: 55px;
+  padding: 5px;
+  text-align: center;
+}
+
 body.active .wrapper .sidebar{
   left: -225px;
 }
