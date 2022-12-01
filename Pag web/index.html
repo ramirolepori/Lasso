@@ -11,13 +11,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Assets/style.css" media="screen" />
+    <link rel="stylesheet" href="Assets/css/bootstrap.css">
     <script src="https://kit.fontawesome.com/0a761e9546.js" crossorigin="anonymous"></script>
     <title>Lasso</title>
 </head>
 
 <body>
-    <script src="./Script/scripts.js"></script>
+    <script src="Assets/Script/scripts.js"></script>
     <div class="wrapper">
         <!--Top menu -->
         <div class="section">
@@ -27,35 +28,87 @@
                         <i class="fas fa-bars"></i>
                     </a>
                 </div>
-                <!--body here -->
                 <header>
                     <img class="logo" src="./src/images/Logo/LOGO-EMOZART PNG.png" alt="logo" height="100px"
                         width="300px">
                 </header>
-                <main>
-                    <h1>CONTENIDO</h1>
-                    <div class="alerts">
-                        <div class="alert">
-                            <div class="alertTitle">Cantidad</div>
-                            <div class="alertContent">Vacas: 150000</div>
+                <!--body here -->
+                <div id="right-panel" class="right-panel">
+                    <main>
+                        <h1>CONTENIDO</h1>
+                        <div class="alerts">
+                            <div class="alert">
+                                <div class="alertTitle">Cantidad</div>
+                                <div class="alertContent">Vacas: 150000</div>
+                            </div>
+                            <div class="alert">
+                                <div class="alertTitle">Enfermedad</div>
+                                <div class="alertContent">0 Vacas enfermas</div>
+                            </div>
+                            <div class="alert">
+                                <div class="alertTitle">Embarazo</div>
+                                <div class="alertContent">0 Vacas embarzadas</div>
+                            </div>
+                            <div class="alert">
+                                <div class="alertTitle">Robo</div>
+                                <div class="alertContent">0 Vacas robadas</div>
+                            </div>
                         </div>
-                        <div class="alert">
-                            <div class="alertTitle">Enfermedad</div>
-                            <div class="alertContent">0 Vacas enfermas</div>
-                        </div>
-                        <div class="alert">
-                            <div class="alertTitle">Embarazo</div>
-                            <div class="alertContent">0 Vacas embarzadas</div>
-                        </div>
-                        <div class="alert">
-                            <div class="alertTitle">Robo</div>
-                            <div class="alertContent">0 Vacas robadas</div>
-                        </div>
-                    </div>
-                    <h1>Historoial de alertas</h1>
-                    <div>
 
-                    </div>
+
+                        <div class="content">
+                            <div class="animated fadeIn">
+                                <div class="row">
+
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <strong class="card-title">Stripped Table</strong>
+                                            </div>
+                                            <div class="card-body">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">First</th>
+                                                            <th scope="col">Last</th>
+                                                            <th scope="col">Handle</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">1</th>
+                                                            <td>Mark</td>
+                                                            <td>Otto</td>
+                                                            <td>@mdo</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>Jacob</td>
+                                                            <td>Thornton</td>
+                                                            <td>@fat</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>Larry</td>
+                                                            <td>the Bird</td>
+                                                            <td>@twitter</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--row-->
+                            </div>
+                            <!--div animated-fadeIn-->
+                        </div>
+                        <!--div content-->
+                        <h1>Historial de alertas</h1>
+                </div>
+                <!--right panel-->
+
                 </main>
                 <footer class="site-footer">
                     <div class="footer-inner bg-white">
@@ -70,76 +123,76 @@
                     </div>
                 </footer>
             </div>
-        </div>
-        <div class="sidebar">
-            <!--profile image & text-->
-            <div class="profile">
-                <img src="./src/images/user.png" alt="logo">
-                <h3>Nombre Usuario</h3>
-                <p>Cargo</p>
+            <div class="sidebar">
+                <!--profile image & text-->
+                <div class="profile">
+                    <img src="./src/images/user.png" alt="logo">
+                    <h3>Nombre Usuario</h3>
+                    <p>Cargo</p>
+                </div>
+                <!--menu item-->
+                <ul>
+                    <li>
+                        <a href="#" class="active">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="map.html">
+                            <span class="icon"><i class="fa-solid fa-map"></i></span>
+                            <span class="item">MAPA</span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-layer-group"></i></span>
+                            <span class="item">SENSORES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-cow"></i></span>
+                            <span class="item">VACAS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-chart-line"></i></span>
+                            <span class="item">REPORTES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-shield"></i></span>
+                            <span class="item">MI USUARIO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-cog"></i></span>
+                            <span class="item">CONFIGURACION</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <!--menu item-->
-            <ul>
-                <li>
-                    <a href="#" class="active">
-                        <span class="icon"><i class="fas fa-home"></i></span>
-                        <span class="item">Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="map.html">
-                        <span class="icon"><i class="fa-solid fa-map"></i></span>
-                        <span class="item">MAPA</span>
 
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-layer-group"></i></span>
-                        <span class="item">SENSORES</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fa-solid fa-cow"></i></span>
-                        <span class="item">VACAS</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-chart-line"></i></span>
-                        <span class="item">REPORTES</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-user-shield"></i></span>
-                        <span class="item">MI USUARIO</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-cog"></i></span>
-                        <span class="item">CONFIGURACION</span>
-                    </a>
-                </li>
-            </ul>
         </div>
 
+        <footer class="site-footer">
+            <div class="footer-inner bg-white">
+                <div class="row">
+                    <div class="col-sm-6">
+                        Copyright &copy; 2018 Ela Admin
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        Designed by <a href="https://colorlib.com">Colorlib</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-
-    <footer class="site-footer">
-        <div class="footer-inner bg-white">
-            <div class="row">
-                <div class="col-sm-6">
-                    Copyright &copy; 2018 Ela Admin
-                </div>
-                <div class="col-sm-6 text-right">
-                    Designed by <a href="https://colorlib.com">Colorlib</a>
-                </div>
-            </div>
-        </div>
-    </footer>
 </body>
 
 </html>
