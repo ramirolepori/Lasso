@@ -45,167 +45,141 @@
                             <div class="animated fadeIn">
                                 <div class="row">
 
-                                    <div class="col-lg-6">
+                                    <div class="col-md-4">
                                         <div class="card">
                                             <div class="card-header">
                                                 <strong class="card-title">Cabezas de Ganado</strong>
                                             </div>
                                             <div class="card-body">
-                                                <table class="table table-striped">
+                                                <p class="card-text">Cantidad: 320.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <strong class="card-title">Avisos de Salud<small><span class="badge badge-success float-right mt-1">Success</span></small></strong>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">Probablemente hay 0 enfermas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <strong class="card-title">Extravios <small><span class="badge badge-success float-right mt-1">Success</span></small></strong>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">Probablemente hay 0 Extraviadas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <strong class="card-title">Historial de alertas</strong>
+                                            </div>
+                                            <div class="card-body">
+                                                <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                                     <thead>
                                                         <tr>
                                                             <th scope="col">#</th>
                                                             <th scope="col">Identificacion</th>
-                                                            <th scope="col">Genero</th>
-                                                            <th scope="col">Edad</th>
-                                                            <th scope="col">Raza</th>
+                                                            <th scope="col">Fecha</th>
+                                                            <th scope="col">Tipo de Aviso</th>
+                                                            <th scope="col">Info</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         <tr>
                                                             <th scope="row">1</th>
                                                             <td>H-31598</td>
-                                                            <td>Hembra</td>
-                                                            <td>4 Años</td>
-                                                            <td>Aberdinangus</td>
+                                                            <td>03/12/2022 22:50</td>
+                                                            <td>Salud</td>
+                                                            <td><+Info></td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">2</th>
                                                             <td>H-84715</td>
-                                                            <td>Hembra</td>
-                                                            <td>6 Meses</td>
-                                                            <td>Hereford</td>
+                                                            <td>23/05/2022 23:41</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">3</th>
                                                             <td>M-35523</td>
-                                                            <td>Macho</td>
-                                                            <td>6 Años</td>
-                                                            <td>Hereford</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Avisos de Enfermedad</strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <table class="table table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">#</th>
-                                                            <th scope="col">Identificacion</th>
-                                                            <th scope="col">Sospecha</th>
-                                                            <th scope="col">Detalle</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>H-34523</td>
-                                                            <td>Mastitis</td>
-                                                            <td>Link</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>M-56374</td>
-                                                            <td>Desconocido</td>
-                                                            <td>Link</td>
+                                                            <td>22/05/2022 10:20</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">3</th>
-                                                            <td>H-15489</td>
-                                                            <td>Deshidratación</td>
-                                                            <td>Link</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Embarazos</strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <table class="table table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">#</th>
-                                                            <th scope="col">Identificacion</th>
-                                                            <th scope="col">Fecha Inseminado</th>
-                                                            <th scope="col">Fecha Estimada Parto</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>H-15498</td>
-                                                            <td>25/01/2022</td>
-                                                            <td>25/11/2022</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>H-64184</td>
-                                                            <td>01/02/2022</td>
-                                                            <td>01/12/2022</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Extravios</strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <table class="table table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">#</th>
-                                                            <th scope="col">Identificacion</th>
-                                                            <th scope="col">Extravio desde</th>
-                                                            <th scope="col">Link</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>M-58479</td>
-                                                            <td>10 Dias</td>
-                                                            <td>Link</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>H-54874</td>
-                                                            <td>5 Dias</td>
-                                                            <td>Link</td>
+                                                            <td>M-35523</td>
+                                                            <td>22/05/2022 10:20</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
                                                         </tr>
                                                         <tr>
                                                             <th scope="row">3</th>
-                                                            <td>H-25148</td>
-                                                            <td>12 horas</td>
-                                                            <td>Link</td>
+                                                            <td>M-35523</td>
+                                                            <td>22/05/2022 10:20</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
                                                         </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>M-35523</td>
+                                                            <td>22/05/2022 10:20</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>M-35523</td>
+                                                            <td>22/05/2022 10:20</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>M-35523</td>
+                                                            <td>22/05/2022 10:20</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>M-35523</td>
+                                                            <td>22/05/2022 10:20</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">3</th>
+                                                            <td>M-35523</td>
+                                                            <td>22/05/2022 10:20</td>
+                                                            <td>Extravío</td>
+                                                            <td><+Info></td>
+                                                        </tr>
+
                                                     </tbody>
                                                 </table>
                                             </div>
                                         </div>
                                     </div>
+
+           
+                                   
                                 </div>
                                 <!--row-->
                             </div>
                             <!--div animated-fadeIn-->
                         </div>
                         <!--div content-->
-                        <h1>Historial de alertas</h1>
                 </div>
                 <!--right panel-->
 
