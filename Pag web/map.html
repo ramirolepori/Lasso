@@ -22,18 +22,21 @@
     <link rel="stylesheet" type="text/css" href="Assets/style.css" media="screen" />
     <script src="https://kit.fontawesome.com/0a761e9546.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    
+
     <title>Lasso</title>
 </head>
 
 <body>
     <script src="Assets/Script/scripts.js"></script>
     <script src="Assets/Script/map.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"
+        defer></script>
     <div class="wrapper">
         <!--Top menu -->
         <div class="section">
             <div class="top_navbar">
-                <div class="hideButton" onclick="myFunction()" >
+                <div class="hideButton" onclick="myFunction()">
                     <a href="#">
                         <i class="fas fa-bars"></i>
                     </a>
@@ -50,12 +53,15 @@
                             src="https://www.google.com/maps/d/embed?mid=1WhYSb0E_L0Ndd0AsFUP2iSEolhmg9gI&ehbc=2E312F"
                             width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div> -->
+                    <div id="map" class="map-responsive"></div>
 
-                    <div id="map" onclick="initMap()"></div>
+
+
+                    <!-- <div id="map" onclick="initMap()"></div>
                     <div id="info-box">?</div>
                     <script
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaK1TmVCnhZN1fd4vbdRCDQ2-1eeP2hPs&callback=initMap&v=weekly"
-                        defer></script>
+                        defer></script>-->
 
                     <footer class="site-footer">
                         <div class="footer-inner bg-white">
