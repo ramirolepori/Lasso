@@ -585,3 +585,31 @@ footer.site-footer .footer-inner a {
   border-color: #e8e9ef;
   color: #868e96 !important;
 }
+
+/** 
+  * Always set the map height explicitly to define the size of the div element
+  * that contains the map. 
+  */
+#map {
+  height: 100%;
+}
+
+/** 
+   * Optional: Makes the sample page fill the window. 
+   */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#info-box {
+  background-color: white;
+  border: 1px solid black;
+  bottom: 30px;
+  height: 20px;
+  padding: 10px;
+  position: absolute;
+  left: 30px;
+}
