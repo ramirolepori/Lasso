@@ -613,3 +613,16 @@ body {
   position: absolute;
   left: 30px;
 }
+
+.btn,
+button,
+input,
+textarea {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: 0 !important;
+}
+
+.btn {
+  border-radius: 3px;
+}

@@ -1,5 +1,5 @@
 let map;
-
+/*
 function iniciarMap() {
   var coord = { lat: -34.5956145, lng: -58.4431949 };
   var map = new google.maps.Map(document.getElementById("map"), {
@@ -18,24 +18,27 @@ function iniciarMap() {
     position: { lat: -33.5966145, lng: -58.4421949 },
     map: map,
   });
-}
+}*/
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 20, lng: -160 },
-    zoom: 2,
+    center: { lat: -31.922505819799284, lng: -62.4630576720368 },
+    zoom: 15,
   });
 
-  // Get the earthquake data (JSONP format)
-  // This feed is a copy from the USGS feed, you can find the originals here:
-  // http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php
-  const script = document.createElement("script");
+  var marker = new google.maps.Marker({
+    position: { lat: -31.924381688239954, lng: -62.46537510080521 },
+    map: map,
+  });
+  var marker = new google.maps.Marker({
+    position: { lat: -31.922232631922736, lng: -62.45983902142931 },
+    map: map,
+  });
+  var marker = new google.maps.Marker({
+    position: { lat: -31.918735754990795, lng: -62.46322933360525 },
+    map: map,
+  });
 
-  script.setAttribute(
-    "src",
-    "https://storage.googleapis.com/mapsdevsite/json/quakes.geo.json"
-  );
-  document.getElementsByTagName("head")[0].appendChild(script);
 
   // Set mouseover event for each feature.
   map.data.addListener("click", (event) => {
