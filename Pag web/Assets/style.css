@@ -124,6 +124,11 @@ body {
 
 }
 
+.card-footer.bg-white.br-0.pl-5.pr-5.pt-1.pb-4.mb-3 {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
 .wrapper .section .top_navbar .hideButton a {
   font-size: 28px;
   color: #f4fbff;
@@ -347,6 +352,16 @@ footer.site-footer .footer-inner a {
   border-radius: 5px 5px 0 0;
 }
 
+.social-buttons .card-body p button {
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.social-buttons .only-icon .card-body p button {
+  padding: 0;
+}
+
 .card.weather-box .card-body {
   padding-top: 0;
 }
@@ -521,6 +536,10 @@ footer.site-footer .footer-inner a {
   width: 40%;
 }
 
+.card-body {
+  padding: 15px;
+}
+
 .card .card-body {
   float: left;
   padding: 1.25em;
@@ -625,4 +644,51 @@ textarea {
 
 .btn {
   border-radius: 3px;
+}
+
+.order-table .badge {
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.navbar .navbar-nav li>a .badge {
+  border-radius: 0;
+  font-weight: 600;
+  float: right;
+  margin: 6px 0 0 0;
+  padding: 0.4em 0.5em;
+}
+
+.open aside.left-panel .navbar .navbar-nav li a .badge {
+  display: none;
+}
+
+aside.left-panel .navbar .navbar-nav li a .badge {
+  display: none;
+}
+
+.card .dropdown.float-right .dropdown-menu {
+  left: inherit !important;
+  right: 0 !important;
+  top: 93% !important;
+}
+
+.add{
+  float: right;
+}
+
+.flot-container {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 275px;
+  padding: 20px 15px 15px;
+  margin: 15px auto 30px;
+  background: transparent;
+}
+
+.flot-pie-container {
+  height: 275px;
 }

@@ -47,49 +47,14 @@
                             <div class="animated fadeIn">
                                 <div class="row">
 
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Cabezas de Ganado</strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <p class="card-text">Cantidad: 320.000</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Avisos de Salud<small><span
-                                                            class="badge badge-success float-right mt-1">Success</span></small></strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <p class="card-text">Probablemente hay 0 enfermas</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Extravios <small><span
-                                                            class="badge badge-success float-right mt-1">Success</span></small></strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <p class="card-text">Probablemente hay 0 Extraviadas</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="col-md-12">
                                         <div class="card">
                                             <div class="card-header">
-                                                <strong class="card-title">Historial de alertas</strong>
+                                                <strong class="card-title">detailSensores</strong>
                                             </div>
                                             <div class="card-body">
                                                 <div class="row">
-                                                    <div class="col-sm-12 col-md-6">
+                                                    <div class="col-sm-12 col-md-4">
                                                         <div class="dataTables_length" id="bootstrap-data-table_length">
                                                             <label>Show <select name="bootstrap-data-table_length"
                                                                     aria-controls="bootstrap-data-table"
@@ -101,13 +66,17 @@
                                                                 </select> entries</label>
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-12 col-md-6">
+                                                    <div class="col-sm-12 col-md-4">
                                                         <div id="bootstrap-data-table_filter" class="dataTables_filter">
                                                             <label>Search:<input type="search"
                                                                     class="form-control form-control-sm" placeholder=""
                                                                     aria-controls="bootstrap-data-table"></label>
                                                         </div>
                                                     </div>
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <button type="button" class="btn btn-info add" onclick="window.open('newSensor.html','_blank')">Agregar sensor</button>
+                                                    </div>
+                                                    
                                                 </div>
                                                 <div class="row">
                                                     <table id="bootstrap-data-table"
@@ -115,148 +84,158 @@
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col">#</th>
-                                                                <th scope="col">Identificacion</th>
-                                                                <th scope="col">Fecha</th>
-                                                                <th scope="col">Tipo de Aviso</th>
+                                                                <th scope="col">Código</th>
+                                                                <th scope="col">Marca</th>
+                                                                <th scope="col">Modelo</th>
                                                                 <th scope="col">Info</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
                                                                 <th scope="row">1</th>
-                                                                <td class="align-middle">H-31598</td>
-                                                                <td class="align-middle">03/12/2022 22:50</td>
-                                                                <td class="align-middle">Salud</td>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
                                                                 <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
                                                                 </td>
                                                             </tr>
+                                                            <tr>
+                                                                <th scope="row">1</th>
+                                                                <td class="align-middle">28390</td>
+                                                                <td class="align-middle">Afimilk</td>
+                                                                <td class="align-middle">AFIFARM 5.4</td>
+                                                                <td class="align-middle">
+                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailSensor.html','_blank')">Info</button>
+                                                                </td>
+                                                            </tr>
+
  
 
                                                         </tbody>
@@ -349,7 +328,7 @@
                 <!--menu item-->
                 <ul>
                     <li>
-                        <a href="#" class="active">
+                        <a href="index.html">
                             <span class="icon"><i class="fas fa-home"></i></span>
                             <span class="item">Home</span>
                         </a>
@@ -362,7 +341,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="sensors.html">
+                        <a href="#" class="active">
                             <span class="icon"><i class="fa-solid fa-layer-group"></i></span>
                             <span class="item">SENSORES</span>
                         </a>

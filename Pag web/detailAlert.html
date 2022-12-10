@@ -26,6 +26,11 @@
 
 <body>
     <script src="Assets/Script/scripts.js"></script>
+    <script src="Assets/Script/map.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaK1TmVCnhZN1fd4vbdRCDQ2-1eeP2hPs&callback=initMap&v=weekly"
+        defer></script>
+    <div class="wrapper">
     <div class="wrapper">
         <!--Top menu -->
         <div class="section">
@@ -43,49 +48,18 @@
 
                 <div id="right-panel" class="right-panel">
                     <main>
+                        <h1>MAPA</h1>
+                        <div id="map" class="map-responsive"></div>
+                        <div id="info-box"></div>
+
                         <div class="content">
                             <div class="animated fadeIn">
                                 <div class="row">
 
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Cabezas de Ganado</strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <p class="card-text">Cantidad: 320.000</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Avisos de Salud<small><span
-                                                            class="badge badge-success float-right mt-1">Success</span></small></strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <p class="card-text">Probablemente hay 0 enfermas</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <strong class="card-title">Extravios <small><span
-                                                            class="badge badge-success float-right mt-1">Success</span></small></strong>
-                                            </div>
-                                            <div class="card-body">
-                                                <p class="card-text">Probablemente hay 0 Extraviadas</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="col-md-12">
                                         <div class="card">
                                             <div class="card-header">
-                                                <strong class="card-title">Historial de alertas</strong>
+                                                <strong class="card-title">Historial de ubicaciones</strong>
                                             </div>
                                             <div class="card-body">
                                                 <div class="row">
@@ -117,8 +91,7 @@
                                                                 <th scope="col">#</th>
                                                                 <th scope="col">Identificacion</th>
                                                                 <th scope="col">Fecha</th>
-                                                                <th scope="col">Tipo de Aviso</th>
-                                                                <th scope="col">Info</th>
+                                                                <th scope="col">Ubicacion</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -126,138 +99,26 @@
                                                                 <th scope="row">1</th>
                                                                 <td class="align-middle">H-31598</td>
                                                                 <td class="align-middle">03/12/2022 22:50</td>
-                                                                <td class="align-middle">Salud</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
+                                                                <td class="align-middle">lat: -31.922505819799284, lng: -62.4630576720368</td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">2</th>
                                                                 <td class="align-middle">H-84715</td>
                                                                 <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
+                                                                <td class="align-middle">lat: -31.924381688239954, lng: -62.46537510080521</td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">2</th>
                                                                 <td class="align-middle">H-84715</td>
                                                                 <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
+                                                                <td class="align-middle">lat: -31.922232631922736, lng: -62.45983902142931</td>
                                                             </tr>
                                                             <tr>
                                                                 <th scope="row">2</th>
                                                                 <td class="align-middle">H-84715</td>
                                                                 <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
+                                                                <td class="align-middle">lat: -31.918735754990795, lng: -62.46322933360525</td>
                                                             </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">2</th>
-                                                                <td class="align-middle">H-84715</td>
-                                                                <td class="align-middle">23/05/2022 23:41</td>
-                                                                <td class="align-middle">Extravío</td>
-                                                                <td class="align-middle">
-                                                                    <button type="button" class="btn btn-info" onclick="window.open('detailAlert.html','_blank')">Info</button>
-                                                                </td>
-                                                            </tr>
- 
 
                                                         </tbody>
                                                     </table>
@@ -349,7 +210,7 @@
                 <!--menu item-->
                 <ul>
                     <li>
-                        <a href="#" class="active">
+                        <a href="index.html">
                             <span class="icon"><i class="fas fa-home"></i></span>
                             <span class="item">Home</span>
                         </a>
