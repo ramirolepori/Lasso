@@ -7,30 +7,30 @@
   var myChart = new Chart( ctx, {
       type: 'line',
       data: {
-          labels: [ "2012", "2013", "2014", "2015", "2016", "2017", "2018" ],
+          labels: [ "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022" ],
           type: 'line',
           defaultFontFamily: 'Montserrat',
           datasets: [ {
-              data: [ 0, 7, 3, 5, 2, 8, 6 ],
-              label: "Expense",
-              backgroundColor: 'rgba(0,200,155,.35)',
-              borderColor: 'rgba(0,200,155,0.60)',
+              data: [ 0, 7, 3, 5, 2, 8, 6, 10, 12, 9, 11 ],
+              label: "Hembras",
+              backgroundColor: 'rgba(255, 192, 203,0.40)',
+              borderColor: 'rgba(255, 182, 193, 0.60)',
               borderWidth: 3.5,
               pointStyle: 'circle',
               pointRadius: 5,
               pointBorderColor: 'transparent',
-              pointBackgroundColor: 'rgba(0,200,155,0.60)',
+              pointBackgroundColor: 'rgba(255, 182, 193, 0.60)',
                   },
                   {
-              data: [ 0, 6, 3, 4, 3, 7, 10 ],
-              label: "Profit",
-              backgroundColor: 'rgba(0,194,146,.25)',
-              borderColor: 'rgba(0,194,146,0.5)',
+              data: [ 0, 6, 3, 4, 3, 7, 10, 5, 2, 12, 20 ],
+              label: "Machos",
+              backgroundColor: 'rgba(0, 255, 255, 0.5)',
+              borderColor: 'rgba(20, 255, 255,0.8)',
               borderWidth: 3.5,
               pointStyle: 'circle',
               pointRadius: 5,
               pointBorderColor: 'transparent',
-              pointBackgroundColor: 'rgba(0,194,146,0.5)',
+              pointBackgroundColor: 'rgba(20, 255, 255, 0.8)',
                   }, ]
       },
       options: {
@@ -76,7 +76,7 @@
                   },
                   scaleLabel: {
                       display: true,
-                      labelString: 'Value'
+                      labelString: 'Cantidad'
                   }
                       } ]
           },
@@ -92,25 +92,20 @@
         type: 'pie',
         data: {
             datasets: [ {
-                data: [ 45, 25, 20, 10 ],
+                data: [ 20, 11 ],
                 backgroundColor: [
-                                    "rgba(0, 194, 146,0.9)",
-                                    "rgba(0, 194, 146,0.7)",
-                                    "rgba(0, 194, 146,0.5)",
-                                    "rgba(0,0,0,0.07)"
+                                    "rgba(20, 255, 255,0.8)",
+                                    "rgba(255, 182, 193, 0.60)"
                                 ],
                 hoverBackgroundColor: [
-                                    "rgba(0, 194, 146,0.9)",
-                                    "rgba(0, 194, 146,0.7)",
-                                    "rgba(0, 194, 146,0.5)",
-                                    "rgba(0,0,0,0.07)"
+                                    "rgba(20, 255, 255,0.8)",
+                                    "rgba(255, 182, 193, 0.60)"
                                 ]
 
                             } ],
             labels: [
-                            "green",
-                            "green",
-                            "green"
+                            "Machos",
+                            "Hembras"
                         ]
         },
         options: {
