@@ -8,35 +8,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="contenedor-barra">
-            <img src="Assets/Resources/LOGO-EMOZART BLANCO PNG.png" alt="Imagen de logo" class="logo">
-            <div class="opciones">
-                <div class="opcion opcion-perfil">
-                    <img src="Assets/Resources/user.png" alt="Imagen de perfil" class="imagen-perfil">
-                    <div class="lista-opciones">
-                        <ul>
-                            <li><a href="/">Opcion 1</a></li>
-                            <li><a href="/">Opcion 2</a></li>
-                            <li><a href="/">Opcion 3</a></li>
-                            <li><a href="/">Opcion 4</a></li>
-                            <li><a href="/">Opcion 5</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="contenedor">
-        <div class="barra-navegacion">
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
-                <li><a href="map.html"><i class="fa-solid fa-map-location-dot"></i> MAPA</a></li>
-                <li><a href="/seccion3"><i class="fa-solid fa-layer-group"></i> SENSORES</a></li>
-                <li><a href="/"><i class="fa-solid fa-cow"></i> GANADO</a></li>
-                <li><a href="/"><i class="fa-solid fa-chart-line"></i> REPORTES</a></li>
-            </ul>
-        </div>
+    <script src="Assets/javascript/header.js"></script>
+    <script src="Assets/javascript/sidebar.js"></script>
+    <div class="contenedor">        
         <div class="contenido">
             <!-- Aquí va el contenido del sitio -->
             <div style="display: flex; flex-direction: column; width: 100%;">
@@ -45,7 +19,7 @@
                         <div class="tarjeta header">
                             Cabezas de Ganado
                         </div>
-                        <div class="tarjeta body">
+                        <div class="tarjeta body centrado">
                             Cantidad: 320.000
                         </div>
                     </div>
@@ -53,7 +27,7 @@
                         <div class="tarjeta header">
                             Cabezas de Ganado
                         </div>
-                        <div class="tarjeta body">
+                        <div class="tarjeta body centrado">
                             Cantidad: 320.000
                         </div>
                     </div>
@@ -61,7 +35,7 @@
                         <div class="tarjeta header">
                             Cabezas de Ganado
                         </div>
-                        <div class="tarjeta body">
+                        <div class="tarjeta body centrado">
                             Cantidad: 320.000
                         </div>
                     </div>
@@ -69,22 +43,24 @@
                 <div class="contenedor-tarjetas">
                     <div class="tarjeta unaPorLinea">
                         <div class="tarjeta header">
-                            Cabezas de Ganado
+                            Historial de alertas
                         </div>
                         <div class="tarjeta body">
                             <div style="display: flex; flex-direction: column; width: 100%;">
-                                <div style="display: flex;">
-                                    <p style="margin-top: 3px; margin-left: 3px">Selección:</p>
+                                <div style="display: flex; margin-top: 3px; margin-bottom: 3px;">
+                                    <label
+                                        style="display: flex; margin-top: 3px; margin-left: 3px; margin-right: auto;">Identificacion:<input
+                                            type="search" placeholder=" Ingrese ID de ganado"
+                                            id="busqueda-historial-alertas"></label>
+                                    <p style="margin-top: 3px; margin-left: 3px">Tipo de aviso:</p>
                                     <select class="lista-desplegable">
-                                        <option>Opción 1</option>
-                                        <option>Opción 2</option>
-                                        <option>Opción 3</option>
-                                        <option>Opción 4</option>
-                                        <option>Opción 5</option>
+                                        <option>Todos</option>
+                                        <option>Salud</option>
+                                        <option>Extravío</option>
                                     </select>
                                 </div>
                                 <div style="display: flex; width: 100%;">
-                                    <table class="tabla-personalizada">
+                                    <table class="tabla-personalizada" id="tabla-historial-alertas">
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Identificacion</th>
@@ -155,7 +131,61 @@
                                                     onclick="window.open('detailAlert.html','_blank')">Consultar</button>
                                             </td>
                                         </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">9</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">10</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">11</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">12</th>
+                                            <td>H-32598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
                                     </table>
+                                </div>
+                                <div style="display: flex; margin-top: 3px; margin-bottom: 3px;">
+                                    <label
+                                        style="display: flex; margin-top: 3px; margin-left: 3px; margin-right: auto;">Mostrando
+                                        10 de 15 entradas.</label>
+                                    <!-- botones de paginación aquí -->
+                                    <button id="primeraPagina" class="boton-paginacion">&lt&lt</button>
+                                    <div id="pagination"></div>
+                                    <button id="ultimaPagina" class="boton-paginacion">&gt&gt</button>
                                 </div>
                             </div>
                         </div>

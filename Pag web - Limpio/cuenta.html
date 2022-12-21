@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <script src="Assets/javascript/script.js"></script>
+    <script src="https://kit.fontawesome.com/0069fd969c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script src="Assets/javascript/header.js"></script>
+    <script src="Assets/javascript/sidebar.js"></script>
+    <div class="contenedor">
+        <div class="contenido">
+            <!-- Aquí va el contenido del sitio -->
+
+            <div style="width: 100%;">
+                <div class="contenedor-tarjetas" style="justify-content: center;">
+                    <div class="tarjeta dos-por-linea">
+                        <div class="tarjeta header">
+                            Datos de usuario
+                        </div>
+                        <div class="tarjeta body centrado">
+                            <form action="#" method="post" class="formulario-usuario">
+                                <div class="input-usuario">
+                                    <i class="fa fa-user"></i>
+                                    <input class="text-usuario" type="text" id="username" name="username"
+                                        placeholder="Nombre de usuario">
+                                </div>
+                                <div class="input-usuario">
+                                    <i class="fa-solid fa-sitemap"></i>
+                                    <input class="text-usuario" type="text" id="cargo" name="cargo" placeholder="Cargo">
+                                </div>
+                                <div class="input-usuario">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <input class="text-usuario" type="number" id="phone" name="phone"
+                                        placeholder="Número de telefono">
+                                </div>
+                                <div class="input-usuario">
+                                    <i class="fa fa-envelope"></i>
+                                    <input class="text-usuario" type="email" id="email" name="email"
+                                        placeholder="Email">
+                                </div>
+                                <div class="input-usuario">
+                                    <label for="file-input">Foto de usuario</label>
+                                    <input type="file" id="file-input" name="file-input">
+                                </div>
+                                <div class="input-usuario"><button type="submit" class="btn">Guardar</button></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tarjeta dos-por-linea">
+                        <div class="tarjeta header">
+                            Seguridad
+                        </div>
+                        <div class="tarjeta body centrado">
+                            <form action="#" method="post" class="formulario-usuario">
+                                <div class="input-usuario">
+                                    <i class="fa fa-asterisk"></i>
+                                    <input class="text-usuario" type="password" id="newPassword" name="newPassword"
+                                        placeholder="Nueva contraseña">
+                                </div>
+                                <div class="input-usuario">
+                                    <i class="fa fa-asterisk"></i>
+                                    <input class="text-usuario" type="password" id="re-newPassword"
+                                        name="re-newPassword" placeholder="Reingrese nueva contraseña">
+                                </div>
+                                <div class="input-usuario"><button type="submit" class="btn">Guardar</button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
