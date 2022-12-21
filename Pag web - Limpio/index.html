@@ -30,8 +30,8 @@
     <div class="contenedor">
         <div class="barra-navegacion">
             <ul>
-                <li><a href="/"><i class="fa-solid fa-house"></i> INICIO</a></li>
-                <li><a href="/seccion2"><i class="fa-solid fa-map-location-dot"></i> MAPA</a></li>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                <li><a href="map.html"><i class="fa-solid fa-map-location-dot"></i> MAPA</a></li>
                 <li><a href="/seccion3"><i class="fa-solid fa-layer-group"></i> SENSORES</a></li>
                 <li><a href="/"><i class="fa-solid fa-cow"></i> GANADO</a></li>
                 <li><a href="/"><i class="fa-solid fa-chart-line"></i> REPORTES</a></li>
@@ -39,43 +39,126 @@
         </div>
         <div class="contenido">
             <!-- Aquí va el contenido del sitio -->
-            <div class="contenedor-tarjetas">
-                <div class="tarjeta inicio">
-                    <div class="tarjeta header">
-                        Cabezas de Ganado
+            <div style="display: flex; flex-direction: column; width: 100%;">
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta inicio">
+                        <div class="tarjeta header">
+                            Cabezas de Ganado
+                        </div>
+                        <div class="tarjeta body">
+                            Cantidad: 320.000
+                        </div>
                     </div>
-                    <div class="tarjeta body">
-                        Cantidad: 320.000
+                    <div class="tarjeta inicio">
+                        <div class="tarjeta header">
+                            Cabezas de Ganado
+                        </div>
+                        <div class="tarjeta body">
+                            Cantidad: 320.000
+                        </div>
+                    </div>
+                    <div class="tarjeta inicio">
+                        <div class="tarjeta header">
+                            Cabezas de Ganado
+                        </div>
+                        <div class="tarjeta body">
+                            Cantidad: 320.000
+                        </div>
                     </div>
                 </div>
-                <div class="tarjeta inicio">
-                    <div class="tarjeta header">
-                        Cabezas de Ganado
-                    </div>
-                    <div class="tarjeta body">
-                        Cantidad: 320.000
-                    </div>
-                </div>
-                <div class="tarjeta inicio">
-                    <div class="tarjeta header">
-                        Cabezas de Ganado
-                    </div>
-                    <div class="tarjeta body">
-                        Cantidad: 320.000
-                    </div>
-                </div>
-                <div class="tarjeta unaPorLinea">
-                    <div class="tarjeta header">
-                        Cabezas de Ganado
-                    </div>
-                    <div class="tarjeta body">
-                        <select class="lista-desplegable">
-                            <option>Opción 1</option>
-                            <option>Opción 2</option>
-                            <option>Opción 3</option>
-                            <option>Opción 4</option>
-                            <option>Opción 5</option>
-                        </select>
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta unaPorLinea">
+                        <div class="tarjeta header">
+                            Cabezas de Ganado
+                        </div>
+                        <div class="tarjeta body">
+                            <div style="display: flex; flex-direction: column; width: 100%;">
+                                <div style="display: flex;">
+                                    <p style="margin-top: 3px; margin-left: 3px">Selección:</p>
+                                    <select class="lista-desplegable">
+                                        <option>Opción 1</option>
+                                        <option>Opción 2</option>
+                                        <option>Opción 3</option>
+                                        <option>Opción 4</option>
+                                        <option>Opción 5</option>
+                                    </select>
+                                </div>
+                                <div style="display: flex; width: 100%;">
+                                    <table class="tabla-personalizada">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Identificacion</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Tipo de Aviso</th>
+                                            <th scope="col">Info</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>H-31342</td>
+                                            <td>03/12/2022 22:57</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td>H-31598</td>
+                                            <td>03/12/2022 22:50</td>
+                                            <td>Salud</td>
+                                            <td><button type="button" class="btn btn-info"
+                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

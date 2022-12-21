@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <script src="Assets/javascript/script.js"></script>
+    <script src="Assets/javascript/map.js"></script>
+    <script src="https://kit.fontawesome.com/0069fd969c.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaK1TmVCnhZN1fd4vbdRCDQ2-1eeP2hPs&callback=initMap&v=weekly"
+        async defer></script>
+    <header>
+        <div class="contenedor-barra">
+            <img src="Assets/Resources/LOGO-EMOZART BLANCO PNG.png" alt="Imagen de logo" class="logo">
+            <div class="opciones">
+                <div class="opcion opcion-perfil">
+                    <img src="Assets/Resources/user.png" alt="Imagen de perfil" class="imagen-perfil">
+                    <div class="lista-opciones">
+                        <ul>
+                            <li><a href="/">Opcion 1</a></li>
+                            <li><a href="/">Opcion 2</a></li>
+                            <li><a href="/">Opcion 3</a></li>
+                            <li><a href="/">Opcion 4</a></li>
+                            <li><a href="/">Opcion 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="contenedor">
+        <div class="barra-navegacion">
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+                <li><a href="map.html"><i class="fa-solid fa-map-location-dot"></i> MAPA</a></li>
+                <li><a href="/seccion3"><i class="fa-solid fa-layer-group"></i> SENSORES</a></li>
+                <li><a href="/"><i class="fa-solid fa-cow"></i> GANADO</a></li>
+                <li><a href="/"><i class="fa-solid fa-chart-line"></i> REPORTES</a></li>
+            </ul>
+        </div>
+        <div class="contenido">
+            <!-- Aquí va el contenido del sitio -->
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta unaPorLinea" style="height: 95%;">
+                    <div class="tarjeta header">
+                        Mapa
+                    </div>
+                    <div class="tarjeta body" style="height: 94%;">
+                        <div id="map" class="map-responsive"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
