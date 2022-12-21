@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    /* Otras propiedades de estilo del cuerpo de la página */
+    font-family: sans-serif; /* Fuente del texto de la página */
+  }
+  
+  
+  header {
+    background-color: #3b5998;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .contenedor-barra {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* coloca los elementos al final del contenedor */
+  }
+  
+  .logo {
+    flex: 1;
+    z-index: 0;
+    /* Otras propiedades de estilo del logo */
+    position: absolute; /* Posicionamiento absoluto del logo */
+    left: 0; /* Posición del logo en el borde izquierdo de la pantalla */
+    top: 0; /* Posición del logo en el borde superior de la pantalla */
+    width: 230px;
+    height: 70px;
+    padding: 2px; /* Agregamos un padding arriba y abajo de 20px a la barra */
+  }
+  
+  .opciones {
+    display: flex;
+  }
+  
+  .opcion {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .imagen-perfil {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 0px; /* Agregamos un margen de 0px al borde izquierdo de la imagen */
+    /* Otras propiedades de estilo de la imagen de perfil */
+    position: absolute; /* Posicionamiento absoluto de la imagen de perfil */
+    right: 10px; /* Posición de la imagen de perfil en el borde izquierdo de la pantalla */
+  }
+  
+  .lista-opciones {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: none;
+    z-index: 1;
+    /* Otras propiedades de estilo del menú */
+    position: absolute; /* El menú se posiciona absolutamente en el documento */
+    top: 47px; /* El menú se posiciona 5px debajo del elemento padre */
+    right: calc(0% + 5px); /* El menú se posiciona al borde izquierdo del elemento padre */
+    min-width: 200px; /* El ancho mínimo del menú es de 200px */
+    margin-right: 5px; /* Agregamos un margen de 5px al menú */
+    border-radius: 5px; /* Redondeamos las esquinas del menú con un radio de 5px */
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05); /* Agregamos una sombra al menú */
+    display: none; /* Ocultamos el menú por defecto */
+    z-index: 1; /* Aseguramos que el menú esté por encima de otros elementos */
+  }
+  
+  .lista-opciones ul li {
+    /* Otras propiedades de estilo de los elementos del menú */
+    display: flex; /* Convertimos a flexbox los elementos del menú */
+    align-items: center; /* Centramos el contenido de los elementos verticalmente */
+    justify-content: center; /* Centramos el contenido de los elementos horizontalmente */
+    width: 100%; /* Ocupamos todo el ancho del menú */
+    padding: 10px 0; /* Agregamos un espacio de 10px arriba y abajo de cada elemento */
+    border-bottom: 2px solid rgb(216, 213, 213); /* Agregamos una línea blanca debajo de cada elemento */
+    height: 50px; /* Altura normal de los elementos del menú */
+  }
+
+  .lista-opciones ul li a {
+    /* Otras propiedades de estilo de los enlaces del menú */
+    display: flex; /* Convertimos a flexbox los elementos del menú */
+    align-items: center; /* Centramos el contenido de los elementos verticalmente */
+    justify-content: center; /* Centramos el contenido de los elementos horizontalmente */
+    color: rgb(88, 82, 82); /* Color blanco del texto de los enlaces del menú */
+    height: 50px; /* Altura normal de los elementos del menú */
+    width: 100%; /* Ancho normal de los elementos del menú */
+    text-decoration: none; /* Sin subrayado en los enlaces del menú */
+  }
+
+  .lista-opciones ul li a:hover {
+    /* Otras propiedades de estilo de los enlaces de la barra de navegación al pasar el mouse */
+    display: flex; /* Convertimos a flexbox los elementos del menú */
+    align-items: center; /* Centramos el contenido de los elementos verticalmente */
+    justify-content: center; /* Centramos el contenido de los elementos horizontalmente */
+    background-color: rgb(216, 213, 213); /* El fondo de los enlaces cambia a gris oscuro al pasar el mouse */
+    /*border-radius: 5px; /* Redondeamos las esquinas de los enlaces al pasar el mouse */
+    /*height: 45px; /* Altura al pasar el mouse (10px más que la altura normal) */
+    /*width: 97%; /* Ocupamos todo el ancho del menú */
+    color:#000;
+  }
+  
+  .lista-opciones li {
+    padding: 10px;
+    color: #000;
+  }
+  
+  .contenedor {
+    display: flex;
+  }
+  
+  .barra-navegacion {
+    /* Otras propiedades de estilo de la barra de navegación */
+    background-color: #3b5998; /* El fondo de la barra es de color gris oscuro */
+    color: #fff; /* El texto de la barra es de color blanco */
+    width: 20%; /* La barra ocupa el 200px de ancho */
+    height: 100vh; /* La barra ocupa todo el alto de la pantalla */
+    position: fixed; /* La barra se posiciona fija en la pantalla */
+    /*top: 0; /* La barra se posiciona arriba de la pantalla */
+    left: 0; /* La barra se posiciona al borde izquierdo de la pantalla */
+    overflow-y: auto; /* Se habilita el scroll en la barra en caso de que el contenido sea muy largo */
+    /*padding: 20px 0; /* Agregamos un padding arriba y abajo de 20px a la barra */
+  }
+  
+  .barra-navegacion ul {
+    list-style: none;
+    /* Otras propiedades de estilo de la lista de la barra de navegación */
+    margin: 0; /* Eliminamos el margen de la lista */
+    padding: 0; /* Eliminamos el padding de la lista */
+  }
+  
+  .barra-navegacion li {
+    padding: 10px;
+  }
+
+  .barra-navegacion ul li a:hover {
+    /* Otras propiedades de estilo de los enlaces de la barra de navegación al pasar el mouse */
+    display: flex; /* Convertimos a flexbox los elementos del menú */
+    align-items: center; /* Centramos el contenido de los elementos verticalmente */
+    justify-content: center; /* Centramos el contenido de los elementos horizontalmente */
+    background-color: rgb(252, 250, 250); /* El fondo de los enlaces cambia a gris oscuro al pasar el mouse */
+    border-radius: 5px; /* Redondeamos las esquinas de los enlaces al pasar el mouse */
+    height: 45px; /* Altura al pasar el mouse (10px más que la altura normal) */
+    width: 97%; /* Ocupamos todo el ancho del menú */
+    color:#000;
+  }
+  
+  
+  .barra-navegacion ul li {
+    /* Otras propiedades de estilo de los elementos del menú */
+    display: flex; /* Convertimos a flexbox los elementos del menú */
+    align-items: center; /* Centramos el contenido de los elementos verticalmente */
+    justify-content: center; /* Centramos el contenido de los elementos horizontalmente */
+    width: 100%; /* Ocupamos todo el ancho del menú */
+    padding: 10px 0; /* Agregamos un espacio de 10px arriba y abajo de cada elemento */
+    border-bottom: 2px solid #fff; /* Agregamos una línea blanca debajo de cada elemento */
+    height: 50px; /* Altura normal de los elementos del menú */
+  }
+
+  .barra-navegacion ul li a {
+    /* Otras propiedades de estilo de los enlaces del menú */
+    display: flex; /* Convertimos a flexbox los elementos del menú */
+    align-items: center; /* Centramos el contenido de los elementos verticalmente */
+    justify-content: center; /* Centramos el contenido de los elementos horizontalmente */
+    color: #fff; /* Color blanco del texto de los enlaces del menú */
+    height: 50px; /* Altura normal de los elementos del menú */
+    width: 100%; /* Ancho normal de los elementos del menú */
+    text-decoration: none; /* Sin subrayado en los enlaces del menú */
+  }
+  
+  
+  .contenido {
+    flex: 1;
+    display: flex;
+    background-color: #ecf0f1;
+    /* Otras propiedades de estilo del contenido */
+    position: absolute; /* Establecemos una posición absoluta al contenido */
+    top: 50px; /* Posicionamos el contenido debajo de la barra superior */
+    left: 230px; /* Posicionamos el contenido a la derecha de la barra lateral izquierda */
+    right: 0; /* Ocupamos el resto del ancho disponible */
+    bottom: 0; /* Ocupamos el resto del alto disponible */
+    overflow: auto; /* Mostramos una barra de scroll cuando el contenido sea demasiado grande */
+  }
+
+  .contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .tarjeta{
+    /*background-color: #fff; /* Fondo blanco */
+    color: #000;
+    /*border-radius: 5px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05); /* Sombra */
+    /* Otras propiedades de estilo de la tarjeta */
+    /*width: fit-content;*/
+    /*max-width: 100%;*/
+    /*height: fit-content;*/
+    /*margin: 5px 5px 5px 5px;*/
+    /*padding: 10px; /* Agregamos un margen interno de 10px a la tarjeta */
+    overflow: auto; /* Mostramos una barra de scroll cuando el contenido sea demasiado grande */
+  }
+
+  .tarjeta.body {
+    background-color: #fff;
+        min-height: 60px;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+  }
+
+  .tarjeta.header{
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 25px;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(235, 231, 231);
+  }
+
+  .tarjeta.inicio{
+    width: 32%;
+    height: fit-content;
+    margin: 5px;
+  }
+
+  .tarjeta.unaPorLinea{
+    width: 100%;
+    height: fit-content;
+    margin: 5px;
+  }
+
+  .lista-desplegable{
+    border-radius: 3px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05); /* Sombra */
+    
+  }
+  
