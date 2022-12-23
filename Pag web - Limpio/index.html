@@ -10,7 +10,7 @@
 <body>
     <script src="Assets/javascript/header.js"></script>
     <script src="Assets/javascript/sidebar.js"></script>
-    <div class="contenedor">        
+    <div class="contenedor">
         <div class="contenido">
             <!-- Aquí va el contenido del sitio -->
             <div style="display: flex; flex-direction: column; width: 100%;">
@@ -60,127 +60,22 @@
                                     </select>
                                 </div>
                                 <div style="display: flex; width: 100%;">
+                                    <!--Datos de tabla-->
                                     <table class="tabla-personalizada" id="tabla-historial-alertas">
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Identificacion</th>
-                                            <th scope="col">Fecha</th>
-                                            <th scope="col">Tipo de Aviso</th>
+                                            <th>ID sensor</th>
+                                            <th>ID vaca</th>
+                                            <th>Longitud</th>
+                                            <th>Latitud</th>
+                                            <th>Fecha y hora</th>
                                             <th scope="col">Info</th>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>H-31342</td>
-                                            <td>03/12/2022 22:57</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">6</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">7</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">8</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">9</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">10</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">11</th>
-                                            <td>H-31598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">12</th>
-                                            <td>H-32598</td>
-                                            <td>03/12/2022 22:50</td>
-                                            <td>Salud</td>
-                                            <td><button type="button" class="btn btn-info"
-                                                    onclick="window.open('detailAlert.html','_blank')">Consultar</button>
-                                            </td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div style="display: flex; margin-top: 3px; margin-bottom: 3px;">
-                                    <label
-                                        id="txt-cant-filas" style="display: flex; margin-top: 3px; margin-left: 3px; margin-right: auto;">Mostrando
+                                    <label id="txt-cant-filas"
+                                        style="display: flex; margin-top: 3px; margin-left: 3px; margin-right: auto;">Mostrando
                                         10 de 15 entradas.</label>
                                     <!-- botones de paginación aquí -->
                                     <button id="primeraPagina" class="boton-paginacion">&lt&lt</button>
@@ -190,6 +85,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
