@@ -92,5 +92,10 @@ window.onload = () => {
   });
 
 
+  //Funcionalidad para enviar cantidad de entradas en la tabla de paginacion.
+  const numeroTotalFilas = tablaPaginacion.rows.length;
+  document.getElementById("txt-cant-filas").innerHTML = `Mostrando 10 de ${numeroTotalFilas - 1} entradas`;
+
+
   ////////////////////////////////////////////////////////////////////////////
 };
