@@ -21,8 +21,8 @@ app.use(express.json());
 // })
 
 //Routes
-app.use(require('./routes/index'));
-app.use('./cows.json', require('./routes/cows'));
+app.use('/',require('./routes/index'));
+app.use('/cows.json', require('./routes/cows'));
 
 
 //Iniciando el servidor, escuchando...
