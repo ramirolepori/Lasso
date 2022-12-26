@@ -1,51 +1,98 @@
 let map;
-/*
-function iniciarMap() {
-  var coord = { lat: -34.5956145, lng: -58.4431949 };
-  var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
-    center: coord,
-  });
-  var marker = new google.maps.Marker({
-    position: coord,
-    map: map,
-  });
-  var marker = new google.maps.Marker({
-    position: { lat: -34.5966145, lng: -58.4421949 },
-    map: map,
-  });
-  var marker = new google.maps.Marker({
-    position: { lat: -33.5966145, lng: -58.4421949 },
-    map: map,
-  });
-}*/
+var marcadores = [];
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -31.922505819799284, lng: -62.4630576720368 },
-    zoom: 15,
+    center: { lat: -31.90030, lng: -62.38222 },
+    zoom: 12,
+    // Establecemos el tipo de mapa a vista de satélite
+    mapTypeId: 'hybrid' // Utiliza la vista de satelite con labels activados
   });
-
-  var marker = new google.maps.Marker({
-    position: { lat: -31.924381688239954, lng: -62.46537510080521 },
-    map: map,
-  });
-  var marker = new google.maps.Marker({
-    position: { lat: -31.922232631922736, lng: -62.45983902142931 },
-    map: map,
-  });
-  var marker = new google.maps.Marker({
-    position: { lat: -31.918735754990795, lng: -62.46322933360525 },
-    map: map,
-  });
-
-
   // Set mouseover event for each feature.
   map.data.addListener("click", (event) => {
     document.getElementById("info-box").textContent =
       event.feature.getProperty("place");
   });
+  // Agregamos el listener para el evento "idle"
+  map.addListener("idle", () => {
+    // Llamamos a la función que carga y procesa el archivo JSON
+    cargarDatosJSON();
+    //agruparMarcadores();
+  });
+  map.addListener("click", () => {
+    for (var i = 0; i < marcadores.length; i++) {  //I assume you have your infoboxes in some array
+      marcadores[i].InfoWindow.close();
+    }
+  })
 }
+
+//Seccion para cargar los marcadores en el mapa en funcion al json////////////////////
+function cargarDatosJSON() {
+  // Crea una nueva instancia de XMLHttpRequest
+  const xhr = new XMLHttpRequest();
+
+  // Abre una nueva solicitud HTTP GET hacia el archivo JSON
+  xhr.open("GET", "../Backend/src/cows.json");
+
+  // Especifica qué hacer cuando se recibe la respuesta del servidor
+  xhr.onload = function () {
+    // Si la solicitud fue exitosa (código HTTP 200)
+    if (xhr.status === 200) {
+      // Parsea el contenido de la respuesta como un objeto JavaScript
+      const datos = JSON.parse(xhr.responseText);
+      marcadores = [];
+      // Recorre cada entrada del objeto y crea una fila en la tabla con sus valores
+      for (let i = 0; i < datos.length; i++) {
+        // Crea una nueva instancia de google.maps.Marker
+        const marcador = new google.maps.Marker({
+          // Establece la posición del marcador con las coordenadas de latitud y longitud
+          position: { lat: datos[i].lat, lng: datos[i].long },
+          map: map,
+          // Agrega un título al marcador (se mostrará al hacer clic en él)
+          title: `Sensor ${datos[i].idSensor}`
+        });
+        marcador.addListener("click", () => {
+          const infoWindow = new google.maps.InfoWindow({
+            content: "",
+            disableAutoPan: true,
+          });
+          const fechaHora = datos[i].dateTime;
+          const fechaFormateada = new Date(fechaHora).toLocaleString("es-ES", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+          });
+          infoWindow.setContent(`Sensor ${datos[i].idSensor} <br> Ultima posición conocida: ${fechaFormateada}`);
+          infoWindow.open(map, marcador);
+        });
+        marcadores.push(marcador);
+      }
+      // Options to pass along to the marker clusterer
+      const clusterOptions = {
+        imagePath: "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+        //imagePath: 'Assets/Resources/cluster-icon.png',
+        gridSize: 50,
+        zoomOnClick: true,
+        maxZoom: 30,
+        minimumClusterSize: 3,
+      };
+      const marcadoresCluster = new MarkerClusterer(map, marcadores, clusterOptions);
+      // Change styles after cluster is created
+      const styles = marcadoresCluster.getStyles();
+      for (let i = 0; i < styles.length; i++) {
+        styles[i].textColor = "black";
+        styles[i].textSize = 18;
+      }
+    }
+  };
+  // Envía la solicitud
+  xhr.send();
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Defines the callback function referenced in the jsonp file.
 function eqfeed_callback(data) {
