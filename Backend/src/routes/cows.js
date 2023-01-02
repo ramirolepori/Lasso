@@ -7,8 +7,9 @@ const router = Router();
 
 //const data = require('../cows.json');
 
-const querys = require("../lib/querys")
-console.log('TOKEN:       ' + querys.newToken())
+const querys = require("../lib/querys");
+console.log('querys.newToken()');
+/*
 const data = querys.qRequest(
   "GET",
   "https://s3.us-south.cloud-object-storage.appdomain.cloud/data-lake-cos-test/cows.json",
@@ -17,7 +18,7 @@ const data = querys.qRequest(
     'valueHeader': querys.newToken()}]
     
 );
-
+*/
 
 //Cows
 router.get("/", (req, res) => {
