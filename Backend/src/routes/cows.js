@@ -1,26 +1,20 @@
 const { Console } = require("console");
 const { Router, request } = require("express");
 const router = Router();
-
+const querys = require("../lib/querys");
 
 //const _ = require('underscore');
 
 //const data = require('../cows.json');
-
-const querys = require("../lib/querys");
-
-const data = querys.qRequest(
-  "GET",
-  "https://s3.us-south.cloud-object-storage.appdomain.cloud/data-lake-cos-test/cows.json",
-  "json",
-    [{'nameHeader': 'Authorization',
-    'valueHeader': querys.newToken()}]
-    
-);
+const data = 0;
+console.log(data);
 
 //Cows
-router.get("/", (req, res) => {
-  res.json(data);
+router.get("/", async (req, res) => {
+  const data1 = await querys.qRequestLake("GET", "cows.json");
+  console.log(data1.response);
+  res.json(JSON.parse(data1.response));
+  
 });
 
 router.post("/", (req, res) => {
