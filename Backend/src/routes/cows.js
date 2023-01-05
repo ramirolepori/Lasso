@@ -3,6 +3,7 @@ const { Router, request } = require("express");
 const router = Router();
 const querys = require("../lib/querys");
 
+
 //const _ = require('underscore');
 
 //const data = require('../cows.json');
@@ -12,7 +13,8 @@ console.log(data);
 //Cows
 router.get("/", async (req, res) => {
   const data1 = await querys.qRequestLake("GET", "cows.json");
-  console.log(data1.response);
+  res.header('Access-Control-Allow-Origin', '*');
+
   res.json(JSON.parse(data1.response));
   
 });
