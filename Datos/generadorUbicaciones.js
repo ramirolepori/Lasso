@@ -163,11 +163,11 @@ for(let i = 0; i < ubicaciones.length; i++){
 
 
 let csvString = generarCSVString(lista);
-/*fs.writeFile('test.csv', csvString, function (err) {
+fs.writeFile('test.csv', csvString, function (err) {
     if (err) throw err;
     console.log('Saved!');
-});*/
-fs.writeFile('cowLocations.json', data, (err) => {
+});
+/*fs.writeFile('cowLocations.json', data, (err) => {
     if (err) throw err;
-  });
+  });*/
 
