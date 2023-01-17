@@ -1,6 +1,5 @@
 {
-    [{
-        "idCow" : 1,
+    "1": {
         "idSensor" : 1,
         "ubicaciones" : [{
             "lat" : 60.0000,
@@ -11,13 +10,11 @@
             "lat" : 60.002,
             "long" : 60.002,
             "dateTime" : "2022-12-24T10:46:39.123Z"
-            }
-        ],
-        "salud" : "viva",
+            }],
+        "estado" : "sana",
         "fecha-de-alta" : "2022-12-24T10:46:39.123Z"
     },
-    {
-        "idCow": 2,
+    "2": {
         "idSensor" : 2,
         "ubicaciones" : [{
             "lat" : 60.0000,
@@ -30,7 +27,7 @@
             "dateTime" : "2022-12-24T10:46:39.123Z"
             }
         ],
-        "salud" : "viva",
+        "estado" : "sana",
         "fecha-de-alta" : "2022-12-24T10:46:39.123Z"
-    }]
+    }
 }
