@@ -32,7 +32,7 @@ window.onload = () => {
     const xhr = new XMLHttpRequest();
 
     // Abre una nueva solicitud HTTP GET hacia el archivo JSON
-    xhr.open("GET", "../Backend/src/cows.json");
+    xhr.open("GET", "../Datos/registroGanado.json");
 
     // Especifica qué hacer cuando se recibe la respuesta del servidor
     xhr.onload = function () {
@@ -42,20 +42,21 @@ window.onload = () => {
         const datos = JSON.parse(xhr.responseText);
 
         // Recorre cada entrada del objeto y crea una fila en la tabla con sus valores
-        for (let i = 0; i < datos.length; i++) {
+        for (let i = 1; i <= Object.keys(datos).length; i++) {
           const fila = document.createElement("tr");
           fila.innerHTML = `
-            <th>${i + 1}</th>
-            <td>${datos[i].idSensor}</td>
-            <td>${datos[i].idCow}</td>
-            <td>${datos[i].long}</td>
-            <td>${datos[i].lat}</td>
-            <td>${datos[i].dateTime}</td>
-            <td><button type="button" class="btn btn-info"
-            onclick="window.open('detailAlert.html','_blank')">Consultar</button></td>
-          `;
+    <th>${i}</th>
+    <td>${datos[i].idSensor}</td>
+    <td>${i}</td>
+    <td>${datos[i].ubicaciones[0].long}</td>
+    <td>${datos[i].ubicaciones[0].lat}</td>
+    <td>${datos[i].ubicaciones[0].dateTime}</td>
+    <td><button type="button" class="btn btn-info"
+    onclick="window.open('detailAlert.html','_blank')">Consultar</button></td>
+  `;
           document.getElementById("tabla-historial-alertas").appendChild(fila);
         }
+
         // Muestra la primera página al cargar la página
         mostrarPagina(0);
         crearBotonesPaginacion(0);
