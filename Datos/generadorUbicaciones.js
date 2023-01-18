@@ -18,7 +18,7 @@ function editarUbicacion(ub, places = 6, min = -0.000025, max = 0.000025) {
     return result;
 }
 
-function obtenerDateTimeFormateado(){
+function obtenerDateTimeFormateado() {
     /**
      * Devuelve una string que representa una fecha en formato dd/mm/aaaa-HH:MM:SS
      * Actualmente no se utiliza
@@ -40,21 +40,21 @@ function obtenerDateTimeFormateado(){
 }
 
 function nuevaListaUbicaciones(id_min = 0, id_max = 10,
-     lon_min = -62.472255, lon_max = -62.272098,
-     lat_min = -31.952209, lat_max = -31.835612) {
+    lon_min = -62.472255, lon_max = -62.272098,
+    lat_min = -31.952209, lat_max = -31.835612) {
     /** 
     * Genera una lista de ubicaciones aleatorias asociadas a ids.
     * @param {int} id_min   Primer id asociado
     * @param {int} id_max   Último id asociado
-    */ 
+    */
     let foo = [];
     let lat;
     let lon;
-  
+
     for (let i = id_min; i <= id_max; i++) {
         lon = generateRandomDecimalInRangeFormatted(lon_min, lon_max);
         lat = generateRandomDecimalInRangeFormatted(lat_min, lat_max);
-        let fecha  = new Date();
+        let fecha = new Date();
         fecha.setHours(fecha.getHours() - 3);  // Restamos 3 horas por el uso horario
         foo.push({
             idSensor: i,
@@ -67,7 +67,7 @@ function nuevaListaUbicaciones(id_min = 0, id_max = 10,
     return foo;
 }
 
-function modificarListaUbicaciones(ub){
+function modificarListaUbicaciones(ub) {
     /**
      * Genera una nueva lista de ubicaciones a partir de una lista existente
      * @param {Array} ub    Lista original
@@ -86,7 +86,7 @@ function modificarListaUbicaciones(ub){
             longitud: nueva_longitud,
             latitud: nueva_latitud,
             dateTime: nueva_fecha,
-        }; 
+        };
         nueva_lista.push(foo);
     }
     return nueva_lista;
@@ -102,13 +102,13 @@ function generarUbicaciones(n_listas = 10, n_vacas = 10) {
     let ubs = [];
     ubs.push(nuevaListaUbicaciones(1, n_vacas));
 
-    for(let i = 0; i + 1 < n_listas; i++){
+    for (let i = 0; i + 1 < n_listas; i++) {
         ubs.push(modificarListaUbicaciones(ubs[i]));
     }
     return ubs;
 }
 
-function generarCSVString(lista){
+function generarCSVString(lista) {
     /**
      * Genera un string formateado para CSV a partir de una lista de ubicaciones.
      * @param {Array} lista     La lista a partir de la cual se genera el string
@@ -130,7 +130,7 @@ function generarCSVString(lista){
     ]);
 
     return csvList.map(item => item.join(","))
-           .join("\n");
+        .join("\n");
 }
 
 /**
@@ -145,7 +145,7 @@ function generarCSVString(lista){
  * El resultado se guarda en 'test.csv'
  */
 
-if(process.argv.length != 4){
+if (process.argv.length != 4) {
     console.log("Error! Se necesitan 2 argumentos");
     exit();
 }
@@ -154,7 +154,7 @@ let n_vacas = process.argv[3];
 
 let ubicaciones = generarUbicaciones(n_listas, n_vacas);
 let lista = [];
-for(let i = 0; i < ubicaciones.length; i++){
+for (let i = 0; i < ubicaciones.length; i++) {
     // Concatenamos las listas de ubicaciones en una sola lista
     lista = lista.concat(ubicaciones[i]);
 }
@@ -162,12 +162,41 @@ for(let i = 0; i < ubicaciones.length; i++){
 // console.log(obtenerDateTimeFormateado());
 
 
-let csvString = generarCSVString(lista);
+/* let csvString = generarCSVString(lista);
 fs.writeFile('test.csv', csvString, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
-/*fs.writeFile('cowLocations.json', data, (err) => {
-    if (err) throw err;
-  });*/
+ */
+function convertirFormatoJson(listaUbicaciones) {
+    let resultado = {};
+    for (let i = 0; i < listaUbicaciones.length; i++) {
+        let idVaca = listaUbicaciones[i].idVaca;
+        let longitud = listaUbicaciones[i].longitud;
+        let latitud = listaUbicaciones[i].latitud;
+        let dateTime = listaUbicaciones[i].dateTime;
+        if (!(idVaca in resultado)) {
+            resultado[idVaca] = {
+                "idSensor": idVaca,
+                "ubicaciones": [{
+                    "lat": latitud,
+                    "long": longitud,
+                    "dateTime": dateTime
+                }],
+                "estado": "sana",
+                "fecha-de-alta": dateTime
+            };
+        } else {
+            resultado[idVaca]["ubicaciones"].push({
+                "lat": latitud,
+                "long": longitud,
+                "dateTime": dateTime
+            });
+        }
+    }
+    return resultado;
+}
+
+const jsonString = JSON.stringify(convertirFormatoJson(lista), null, 4);
+fs.writeFileSync('registroGanado.json', jsonString);
 

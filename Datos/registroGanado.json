@@ -1,0 +1,1202 @@
+{
+    "1": {
+        "idSensor": 1,
+        "ubicaciones": [
+            {
+                "lat": "-31.882035",
+                "long": "-62.319339",
+                "dateTime": "2023-01-18T13:32:55.640Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.640Z"
+    },
+    "2": {
+        "idSensor": 2,
+        "ubicaciones": [
+            {
+                "lat": "-31.911634",
+                "long": "-62.382469",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "3": {
+        "idSensor": 3,
+        "ubicaciones": [
+            {
+                "lat": "-31.854925",
+                "long": "-62.309750",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "4": {
+        "idSensor": 4,
+        "ubicaciones": [
+            {
+                "lat": "-31.942730",
+                "long": "-62.338035",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "5": {
+        "idSensor": 5,
+        "ubicaciones": [
+            {
+                "lat": "-31.857727",
+                "long": "-62.372479",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "6": {
+        "idSensor": 6,
+        "ubicaciones": [
+            {
+                "lat": "-31.895162",
+                "long": "-62.411659",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "7": {
+        "idSensor": 7,
+        "ubicaciones": [
+            {
+                "lat": "-31.842712",
+                "long": "-62.317666",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "8": {
+        "idSensor": 8,
+        "ubicaciones": [
+            {
+                "lat": "-31.933378",
+                "long": "-62.330291",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "9": {
+        "idSensor": 9,
+        "ubicaciones": [
+            {
+                "lat": "-31.849876",
+                "long": "-62.343465",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "10": {
+        "idSensor": 10,
+        "ubicaciones": [
+            {
+                "lat": "-31.887987",
+                "long": "-62.277188",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "11": {
+        "idSensor": 11,
+        "ubicaciones": [
+            {
+                "lat": "-31.846116",
+                "long": "-62.453580",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "12": {
+        "idSensor": 12,
+        "ubicaciones": [
+            {
+                "lat": "-31.921939",
+                "long": "-62.315097",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "13": {
+        "idSensor": 13,
+        "ubicaciones": [
+            {
+                "lat": "-31.923746",
+                "long": "-62.343411",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "14": {
+        "idSensor": 14,
+        "ubicaciones": [
+            {
+                "lat": "-31.886835",
+                "long": "-62.426074",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "15": {
+        "idSensor": 15,
+        "ubicaciones": [
+            {
+                "lat": "-31.853278",
+                "long": "-62.344753",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "16": {
+        "idSensor": 16,
+        "ubicaciones": [
+            {
+                "lat": "-31.906748",
+                "long": "-62.282383",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "17": {
+        "idSensor": 17,
+        "ubicaciones": [
+            {
+                "lat": "-31.933357",
+                "long": "-62.325968",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "18": {
+        "idSensor": 18,
+        "ubicaciones": [
+            {
+                "lat": "-31.888312",
+                "long": "-62.392568",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "19": {
+        "idSensor": 19,
+        "ubicaciones": [
+            {
+                "lat": "-31.841466",
+                "long": "-62.388092",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "20": {
+        "idSensor": 20,
+        "ubicaciones": [
+            {
+                "lat": "-31.934607",
+                "long": "-62.429057",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "21": {
+        "idSensor": 21,
+        "ubicaciones": [
+            {
+                "lat": "-31.938773",
+                "long": "-62.472213",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "22": {
+        "idSensor": 22,
+        "ubicaciones": [
+            {
+                "lat": "-31.930074",
+                "long": "-62.336379",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "23": {
+        "idSensor": 23,
+        "ubicaciones": [
+            {
+                "lat": "-31.889593",
+                "long": "-62.364993",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "24": {
+        "idSensor": 24,
+        "ubicaciones": [
+            {
+                "lat": "-31.886019",
+                "long": "-62.376767",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "25": {
+        "idSensor": 25,
+        "ubicaciones": [
+            {
+                "lat": "-31.893138",
+                "long": "-62.273066",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "26": {
+        "idSensor": 26,
+        "ubicaciones": [
+            {
+                "lat": "-31.944745",
+                "long": "-62.283577",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "27": {
+        "idSensor": 27,
+        "ubicaciones": [
+            {
+                "lat": "-31.906500",
+                "long": "-62.334098",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "28": {
+        "idSensor": 28,
+        "ubicaciones": [
+            {
+                "lat": "-31.912977",
+                "long": "-62.315417",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "29": {
+        "idSensor": 29,
+        "ubicaciones": [
+            {
+                "lat": "-31.914049",
+                "long": "-62.406543",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "30": {
+        "idSensor": 30,
+        "ubicaciones": [
+            {
+                "lat": "-31.923409",
+                "long": "-62.273142",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "31": {
+        "idSensor": 31,
+        "ubicaciones": [
+            {
+                "lat": "-31.913574",
+                "long": "-62.407998",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "32": {
+        "idSensor": 32,
+        "ubicaciones": [
+            {
+                "lat": "-31.868405",
+                "long": "-62.443653",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "33": {
+        "idSensor": 33,
+        "ubicaciones": [
+            {
+                "lat": "-31.842915",
+                "long": "-62.401942",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "34": {
+        "idSensor": 34,
+        "ubicaciones": [
+            {
+                "lat": "-31.921024",
+                "long": "-62.338650",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "35": {
+        "idSensor": 35,
+        "ubicaciones": [
+            {
+                "lat": "-31.918428",
+                "long": "-62.467195",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "36": {
+        "idSensor": 36,
+        "ubicaciones": [
+            {
+                "lat": "-31.928829",
+                "long": "-62.379095",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "37": {
+        "idSensor": 37,
+        "ubicaciones": [
+            {
+                "lat": "-31.876241",
+                "long": "-62.331908",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "38": {
+        "idSensor": 38,
+        "ubicaciones": [
+            {
+                "lat": "-31.907708",
+                "long": "-62.305504",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "39": {
+        "idSensor": 39,
+        "ubicaciones": [
+            {
+                "lat": "-31.842943",
+                "long": "-62.292420",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "40": {
+        "idSensor": 40,
+        "ubicaciones": [
+            {
+                "lat": "-31.897396",
+                "long": "-62.300201",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "41": {
+        "idSensor": 41,
+        "ubicaciones": [
+            {
+                "lat": "-31.907063",
+                "long": "-62.365980",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "42": {
+        "idSensor": 42,
+        "ubicaciones": [
+            {
+                "lat": "-31.952190",
+                "long": "-62.455379",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "43": {
+        "idSensor": 43,
+        "ubicaciones": [
+            {
+                "lat": "-31.906831",
+                "long": "-62.380552",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "44": {
+        "idSensor": 44,
+        "ubicaciones": [
+            {
+                "lat": "-31.854221",
+                "long": "-62.450714",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "45": {
+        "idSensor": 45,
+        "ubicaciones": [
+            {
+                "lat": "-31.941569",
+                "long": "-62.429876",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "46": {
+        "idSensor": 46,
+        "ubicaciones": [
+            {
+                "lat": "-31.839726",
+                "long": "-62.327724",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "47": {
+        "idSensor": 47,
+        "ubicaciones": [
+            {
+                "lat": "-31.857118",
+                "long": "-62.437756",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "48": {
+        "idSensor": 48,
+        "ubicaciones": [
+            {
+                "lat": "-31.893256",
+                "long": "-62.466908",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "49": {
+        "idSensor": 49,
+        "ubicaciones": [
+            {
+                "lat": "-31.869019",
+                "long": "-62.291251",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "50": {
+        "idSensor": 50,
+        "ubicaciones": [
+            {
+                "lat": "-31.887789",
+                "long": "-62.300870",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "51": {
+        "idSensor": 51,
+        "ubicaciones": [
+            {
+                "lat": "-31.903184",
+                "long": "-62.385277",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "52": {
+        "idSensor": 52,
+        "ubicaciones": [
+            {
+                "lat": "-31.905826",
+                "long": "-62.275825",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "53": {
+        "idSensor": 53,
+        "ubicaciones": [
+            {
+                "lat": "-31.885169",
+                "long": "-62.418097",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "54": {
+        "idSensor": 54,
+        "ubicaciones": [
+            {
+                "lat": "-31.842757",
+                "long": "-62.381682",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "55": {
+        "idSensor": 55,
+        "ubicaciones": [
+            {
+                "lat": "-31.847031",
+                "long": "-62.298326",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "56": {
+        "idSensor": 56,
+        "ubicaciones": [
+            {
+                "lat": "-31.934950",
+                "long": "-62.465095",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "57": {
+        "idSensor": 57,
+        "ubicaciones": [
+            {
+                "lat": "-31.847603",
+                "long": "-62.327012",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "58": {
+        "idSensor": 58,
+        "ubicaciones": [
+            {
+                "lat": "-31.894970",
+                "long": "-62.306183",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "59": {
+        "idSensor": 59,
+        "ubicaciones": [
+            {
+                "lat": "-31.844910",
+                "long": "-62.293952",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "60": {
+        "idSensor": 60,
+        "ubicaciones": [
+            {
+                "lat": "-31.942629",
+                "long": "-62.364829",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "61": {
+        "idSensor": 61,
+        "ubicaciones": [
+            {
+                "lat": "-31.914937",
+                "long": "-62.338955",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "62": {
+        "idSensor": 62,
+        "ubicaciones": [
+            {
+                "lat": "-31.896006",
+                "long": "-62.289731",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "63": {
+        "idSensor": 63,
+        "ubicaciones": [
+            {
+                "lat": "-31.851801",
+                "long": "-62.347514",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "64": {
+        "idSensor": 64,
+        "ubicaciones": [
+            {
+                "lat": "-31.900631",
+                "long": "-62.440657",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "65": {
+        "idSensor": 65,
+        "ubicaciones": [
+            {
+                "lat": "-31.866578",
+                "long": "-62.299940",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "66": {
+        "idSensor": 66,
+        "ubicaciones": [
+            {
+                "lat": "-31.868682",
+                "long": "-62.400719",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "67": {
+        "idSensor": 67,
+        "ubicaciones": [
+            {
+                "lat": "-31.906664",
+                "long": "-62.275263",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "68": {
+        "idSensor": 68,
+        "ubicaciones": [
+            {
+                "lat": "-31.860480",
+                "long": "-62.292167",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "69": {
+        "idSensor": 69,
+        "ubicaciones": [
+            {
+                "lat": "-31.842417",
+                "long": "-62.405752",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "70": {
+        "idSensor": 70,
+        "ubicaciones": [
+            {
+                "lat": "-31.839918",
+                "long": "-62.438611",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "71": {
+        "idSensor": 71,
+        "ubicaciones": [
+            {
+                "lat": "-31.896921",
+                "long": "-62.300804",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "72": {
+        "idSensor": 72,
+        "ubicaciones": [
+            {
+                "lat": "-31.924759",
+                "long": "-62.334662",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "73": {
+        "idSensor": 73,
+        "ubicaciones": [
+            {
+                "lat": "-31.842083",
+                "long": "-62.392807",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "74": {
+        "idSensor": 74,
+        "ubicaciones": [
+            {
+                "lat": "-31.837715",
+                "long": "-62.422777",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "75": {
+        "idSensor": 75,
+        "ubicaciones": [
+            {
+                "lat": "-31.875948",
+                "long": "-62.273904",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "76": {
+        "idSensor": 76,
+        "ubicaciones": [
+            {
+                "lat": "-31.924258",
+                "long": "-62.377419",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "77": {
+        "idSensor": 77,
+        "ubicaciones": [
+            {
+                "lat": "-31.898413",
+                "long": "-62.393082",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "78": {
+        "idSensor": 78,
+        "ubicaciones": [
+            {
+                "lat": "-31.884323",
+                "long": "-62.301072",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "79": {
+        "idSensor": 79,
+        "ubicaciones": [
+            {
+                "lat": "-31.905353",
+                "long": "-62.332665",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "80": {
+        "idSensor": 80,
+        "ubicaciones": [
+            {
+                "lat": "-31.899343",
+                "long": "-62.280523",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "81": {
+        "idSensor": 81,
+        "ubicaciones": [
+            {
+                "lat": "-31.886721",
+                "long": "-62.288046",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "82": {
+        "idSensor": 82,
+        "ubicaciones": [
+            {
+                "lat": "-31.908077",
+                "long": "-62.427717",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "83": {
+        "idSensor": 83,
+        "ubicaciones": [
+            {
+                "lat": "-31.947716",
+                "long": "-62.405050",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "84": {
+        "idSensor": 84,
+        "ubicaciones": [
+            {
+                "lat": "-31.879562",
+                "long": "-62.433316",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "85": {
+        "idSensor": 85,
+        "ubicaciones": [
+            {
+                "lat": "-31.839081",
+                "long": "-62.336439",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "86": {
+        "idSensor": 86,
+        "ubicaciones": [
+            {
+                "lat": "-31.928522",
+                "long": "-62.354019",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "87": {
+        "idSensor": 87,
+        "ubicaciones": [
+            {
+                "lat": "-31.843114",
+                "long": "-62.390850",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "88": {
+        "idSensor": 88,
+        "ubicaciones": [
+            {
+                "lat": "-31.839119",
+                "long": "-62.357961",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "89": {
+        "idSensor": 89,
+        "ubicaciones": [
+            {
+                "lat": "-31.916314",
+                "long": "-62.352258",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "90": {
+        "idSensor": 90,
+        "ubicaciones": [
+            {
+                "lat": "-31.888598",
+                "long": "-62.370632",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "91": {
+        "idSensor": 91,
+        "ubicaciones": [
+            {
+                "lat": "-31.923617",
+                "long": "-62.288007",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "92": {
+        "idSensor": 92,
+        "ubicaciones": [
+            {
+                "lat": "-31.912830",
+                "long": "-62.457852",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "93": {
+        "idSensor": 93,
+        "ubicaciones": [
+            {
+                "lat": "-31.927492",
+                "long": "-62.410448",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "94": {
+        "idSensor": 94,
+        "ubicaciones": [
+            {
+                "lat": "-31.881359",
+                "long": "-62.328134",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "95": {
+        "idSensor": 95,
+        "ubicaciones": [
+            {
+                "lat": "-31.937227",
+                "long": "-62.382528",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "96": {
+        "idSensor": 96,
+        "ubicaciones": [
+            {
+                "lat": "-31.908434",
+                "long": "-62.453090",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "97": {
+        "idSensor": 97,
+        "ubicaciones": [
+            {
+                "lat": "-31.901508",
+                "long": "-62.470697",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "98": {
+        "idSensor": 98,
+        "ubicaciones": [
+            {
+                "lat": "-31.930222",
+                "long": "-62.366964",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "99": {
+        "idSensor": 99,
+        "ubicaciones": [
+            {
+                "lat": "-31.922613",
+                "long": "-62.452327",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    },
+    "100": {
+        "idSensor": 100,
+        "ubicaciones": [
+            {
+                "lat": "-31.856738",
+                "long": "-62.368201",
+                "dateTime": "2023-01-18T13:32:55.643Z"
+            }
+        ],
+        "estado": "sana",
+        "fecha-de-alta": "2023-01-18T13:32:55.643Z"
+    }
+}
