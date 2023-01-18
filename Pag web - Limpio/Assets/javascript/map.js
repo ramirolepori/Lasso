@@ -32,7 +32,7 @@ function cargarDatosJSON() {
   const xhr = new XMLHttpRequest();
 
   // Abre una nueva solicitud HTTP GET hacia el archivo JSON
-  xhr.open("GET", "http://localhost:3000/cows.json");
+  xhr.open("GET", "../Datos/registroGanado.json");
   // Especifica qué hacer cuando se recibe la respuesta del servidor
   xhr.onload = function () {
     // Si la solicitud fue exitosa (código HTTP 200)
@@ -41,21 +41,19 @@ function cargarDatosJSON() {
       const datos = JSON.parse(xhr.responseText);
       marcadores = [];
       // Recorre cada entrada del objeto y crea una fila en la tabla con sus valores
-      for (let i = 0; i < datos.length; i++) {
-        // Crea una nueva instancia de google.maps.Marker
+      for (const key in datos) {
+        const entrada = datos[key];
         const marcador = new google.maps.Marker({
-          // Establece la posición del marcador con las coordenadas de latitud y longitud
-          position: { lat: datos[i].lat, lng: datos[i].long },
+          position: { lat: parseFloat(entrada.ubicaciones[0].lat), lng: parseFloat(entrada.ubicaciones[0].long) },
           map: map,
-          // Agrega un título al marcador (se mostrará al hacer clic en él)
-          title: `Sensor ${datos[i].idSensor}`
+          title: `Sensor ${entrada.idSensor}`
         });
         marcador.addListener("click", () => {
           const infoWindow = new google.maps.InfoWindow({
             content: "",
             disableAutoPan: true,
           });
-          const fechaHora = datos[i].dateTime;
+          const fechaHora = entrada.ubicaciones[0].dateTime;
           const fechaFormateada = new Date(fechaHora).toLocaleString("es-ES", {
             day: "2-digit",
             month: "2-digit",
@@ -64,7 +62,7 @@ function cargarDatosJSON() {
             minute: "2-digit",
             second: "2-digit",
           });
-          infoWindow.setContent(`Sensor ${datos[i].idSensor} <br> Ultima posición conocida: ${fechaFormateada}`);
+          infoWindow.setContent(`Sensor ${entrada.idSensor} <br> Ultima posición conocida: ${fechaFormateada}`);
           infoWindow.open(map, marcador);
         });
         marcadores.push(marcador);

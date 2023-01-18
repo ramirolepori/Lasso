@@ -67,25 +67,28 @@ window.onload = () => {
   }
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //Seccion de filtrado en la tabla de historial de alertas/////////////////////////////////
-  const tablaFiltrado = document.getElementById("tabla-historial-alertas");
-  const busquedaFiltrado = document.getElementById("busqueda-historial-alertas");
-  busquedaFiltrado.addEventListener("input", () => {
-    const txt = busquedaFiltrado.value.toLowerCase();
-    if (txt == '') {
-      mostrarPagina(0);
-    } else {
-      for (let i = 1; i < tablaFiltrado.rows.length; i++) {
-        const columna = tablaFiltrado.rows[i].cells[1].textContent.toLowerCase();
-        if (columna.indexOf(txt) > -1) {
-          tablaFiltrado.rows[i].style.display = "";
-        } else {
-          tablaFiltrado.rows[i].style.display = "none";
+  if (location.pathname === '/index.html') {
+    //Seccion de filtrado en la tabla de historial de alertas/////////////////////////////////
+    const tablaFiltrado = document.getElementById("tabla-historial-alertas");
+    const busquedaFiltrado = document.getElementById("busqueda-historial-alertas");
+    busquedaFiltrado.addEventListener("input", () => {
+      const txt = busquedaFiltrado.value.toLowerCase();
+      if (txt == '') {
+        mostrarPagina(0);
+      } else {
+        for (let i = 1; i < tablaFiltrado.rows.length; i++) {
+          const columna = tablaFiltrado.rows[i].cells[1].textContent.toLowerCase();
+          if (columna.indexOf(txt) > -1) {
+            tablaFiltrado.rows[i].style.display = "";
+          } else {
+            tablaFiltrado.rows[i].style.display = "none";
+          }
         }
       }
-    }
-  });
-  ////////////////////////////////////////////////////////////////////////////////////////////
+    });
+    ////////////////////////////////////////////////////////////////////////////////////////////
+  }
+
 
   //Seccion de paginacion de tabla historial alertas
   // Selecciona la tabla y el contenedor de los botones de página
