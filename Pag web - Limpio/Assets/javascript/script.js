@@ -53,7 +53,7 @@ window.onload = () => {
     <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].lat}</td>
     <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].dateTime}</td>
     <td><button type="button" class="btn btn-info"
-    onclick="window.open('detailAlert.html','_blank')">Consultar</button></td>
+    onclick="window.open('testDelete.html','_blank')">Consultar</button></td>
   `;
           document.getElementById("tabla-historial-alertas").appendChild(fila);
         }
