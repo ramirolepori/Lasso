@@ -199,4 +199,3 @@ function convertirFormatoJson(listaUbicaciones) {
 
 const jsonString = JSON.stringify(convertirFormatoJson(lista), null, 4);
 fs.writeFileSync('registroGanado.json', jsonString);
-

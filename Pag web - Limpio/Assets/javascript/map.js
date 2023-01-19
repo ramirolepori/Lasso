@@ -44,7 +44,7 @@ function cargarDatosJSON() {
       for (const key in datos) {
         const entrada = datos[key];
         const marcador = new google.maps.Marker({
-          position: { lat: parseFloat(entrada.ubicaciones[0].lat), lng: parseFloat(entrada.ubicaciones[0].long) },
+          position: { lat: parseFloat(entrada.ubicaciones[entrada.ubicaciones.length - 1].lat), lng: parseFloat(entrada.ubicaciones[entrada.ubicaciones.length - 1].long) },          
           map: map,
           title: `Sensor ${entrada.idSensor}`
         });
@@ -53,7 +53,7 @@ function cargarDatosJSON() {
             content: "",
             disableAutoPan: true,
           });
-          const fechaHora = entrada.ubicaciones[0].dateTime;
+          const fechaHora = entrada.ubicaciones[entrada.ubicaciones.length - 1].dateTime;
           const fechaFormateada = new Date(fechaHora).toLocaleString("es-ES", {
             day: "2-digit",
             month: "2-digit",

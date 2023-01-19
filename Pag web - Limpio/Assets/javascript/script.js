@@ -42,15 +42,16 @@ window.onload = () => {
         const datos = JSON.parse(xhr.responseText);
 
         // Recorre cada entrada del objeto y crea una fila en la tabla con sus valores
-        for (let i = 1; i <= Object.keys(datos).length; i++) {
+        for (const key in datos) {
+          const entrada = datos[key];
           const fila = document.createElement("tr");
           fila.innerHTML = `
-    <th>${i}</th>
-    <td>${datos[i].idSensor}</td>
-    <td>${i}</td>
-    <td>${datos[i].ubicaciones[0].long}</td>
-    <td>${datos[i].ubicaciones[0].lat}</td>
-    <td>${datos[i].ubicaciones[0].dateTime}</td>
+    <th>${key}</th>
+    <td>${entrada.idSensor}</td>
+    <td>${key}</td>
+    <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].long}</td>
+    <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].lat}</td>
+    <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].dateTime}</td>
     <td><button type="button" class="btn btn-info"
     onclick="window.open('detailAlert.html','_blank')">Consultar</button></td>
   `;
