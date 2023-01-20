@@ -21,11 +21,11 @@ def vacas_dbscan(vacas, eps = 0.43):
     ubicaciones = []
     vacas_ids = list(vacas.keys())
     for id in vacas_ids:
-        latitud = vacas[id]["ubicaciones"][0]["lat"]
-        longitud = vacas[id]["ubicaciones"][0]["long"]
+        latitud = float(vacas[id]["ubicaciones"][0]["lat"])
+        longitud = float(vacas[id]["ubicaciones"][0]["long"])
         ubicaciones.append([latitud, longitud])
 
-    clusters, labels = _dbscan(ubicaciones, eps)  
+    clusters, labels = _vacas_dbscan(ubicaciones, eps)  
 
     vacas_aisladas = []
     for i in range(len(labels)):
@@ -34,12 +34,12 @@ def vacas_dbscan(vacas, eps = 0.43):
     
     return vacas_aisladas # Debería retornar otra estructura de datos
 
-def _dbscan(ubicaciones, eps = 0.43, min_samples = 2):
+def _vacas_dbscan(ubicaciones, _eps = 0.43, _min_samples = 10): # Se produce un error al pasar eps y min_samples al constructor DBSCAN
+                                                                # Por ahora lo dejo así
     """
     """
-    db = DBSCAN(eps, min_samples).fit(ubicaciones)
+    db = DBSCAN(eps=0.009, min_samples=10).fit(ubicaciones)
     labels = db.labels_
-
     # Number of clusters in labels, ignoring noise if present.
     n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
     n_noise_ = list(labels).count(-1)
@@ -53,6 +53,5 @@ def _dbscan(ubicaciones, eps = 0.43, min_samples = 2):
 
     return clusters, labels
 
-vacas = read_json_file('Datos\\boceto-vaca.json')
+vacas = read_json_file('Datos\\registroGanado.json')
 print("Vacas aisladas: ", vacas_dbscan(vacas))
-#print(vacas["1"]["ubicaciones"][0]["lat"])
