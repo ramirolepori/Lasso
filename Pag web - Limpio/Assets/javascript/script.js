@@ -32,7 +32,7 @@ window.onload = () => {
     const xhr = new XMLHttpRequest();
 
     // Abre una nueva solicitud HTTP GET hacia el archivo JSON
-    xhr.open("GET", "../Backend/src/cows.json");
+    xhr.open("GET", "../Datos/registroGanado.json");
 
     // Especifica qué hacer cuando se recibe la respuesta del servidor
     xhr.onload = function () {
@@ -42,20 +42,22 @@ window.onload = () => {
         const datos = JSON.parse(xhr.responseText);
 
         // Recorre cada entrada del objeto y crea una fila en la tabla con sus valores
-        for (let i = 0; i < datos.length; i++) {
+        for (const key in datos) {
+          const entrada = datos[key];
           const fila = document.createElement("tr");
           fila.innerHTML = `
-            <th>${i + 1}</th>
-            <td>${datos[i].idSensor}</td>
-            <td>${datos[i].idCow}</td>
-            <td>${datos[i].long}</td>
-            <td>${datos[i].lat}</td>
-            <td>${datos[i].dateTime}</td>
-            <td><button type="button" class="btn btn-info"
-            onclick="window.open('detailAlert.html','_blank')">Consultar</button></td>
-          `;
+    <th>${key}</th>
+    <td>${entrada.idSensor}</td>
+    <td>${key}</td>
+    <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].long}</td>
+    <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].lat}</td>
+    <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].dateTime}</td>
+    <td><button type="button" class="btn btn-info"
+    onclick="window.open('detailAlert.html','_blank')">Consultar</button></td>
+  `;
           document.getElementById("tabla-historial-alertas").appendChild(fila);
         }
+
         // Muestra la primera página al cargar la página
         mostrarPagina(0);
         crearBotonesPaginacion(0);
@@ -66,25 +68,28 @@ window.onload = () => {
   }
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-  //Seccion de filtrado en la tabla de historial de alertas/////////////////////////////////
-  const tablaFiltrado = document.getElementById("tabla-historial-alertas");
-  const busquedaFiltrado = document.getElementById("busqueda-historial-alertas");
-  busquedaFiltrado.addEventListener("input", () => {
-    const txt = busquedaFiltrado.value.toLowerCase();
-    if (txt == '') {
-      mostrarPagina(0);
-    } else {
-      for (let i = 1; i < tablaFiltrado.rows.length; i++) {
-        const columna = tablaFiltrado.rows[i].cells[1].textContent.toLowerCase();
-        if (columna.indexOf(txt) > -1) {
-          tablaFiltrado.rows[i].style.display = "";
-        } else {
-          tablaFiltrado.rows[i].style.display = "none";
+  if (location.pathname === '/index.html') {
+    //Seccion de filtrado en la tabla de historial de alertas/////////////////////////////////
+    const tablaFiltrado = document.getElementById("tabla-historial-alertas");
+    const busquedaFiltrado = document.getElementById("busqueda-historial-alertas");
+    busquedaFiltrado.addEventListener("input", () => {
+      const txt = busquedaFiltrado.value.toLowerCase();
+      if (txt == '') {
+        mostrarPagina(0);
+      } else {
+        for (let i = 1; i < tablaFiltrado.rows.length; i++) {
+          const columna = tablaFiltrado.rows[i].cells[1].textContent.toLowerCase();
+          if (columna.indexOf(txt) > -1) {
+            tablaFiltrado.rows[i].style.display = "";
+          } else {
+            tablaFiltrado.rows[i].style.display = "none";
+          }
         }
       }
-    }
-  });
-  ////////////////////////////////////////////////////////////////////////////////////////////
+    });
+    ////////////////////////////////////////////////////////////////////////////////////////////
+  }
+
 
   //Seccion de paginacion de tabla historial alertas
   // Selecciona la tabla y el contenedor de los botones de página
