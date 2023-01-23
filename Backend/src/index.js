@@ -1,24 +1,22 @@
 const express = require('express');
 const app = express();
-const morgan=require('morgan');
+const morgan = require('morgan');
 
-//Configuraciones
+// Configuraciones
 app.set('port', process.env.PORT || 3000);
-app.set('json spaces', 2)
+app.set('json spaces', 2);
 
-//Middleware
+// Middleware
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-
-//Routes
-app.use('/',require('./routes/index'));
+// Routes
+app.use('/', require('./routes/index'));
 app.use('/cows.json', require('./routes/cows'));
+app.use('/registroGanado.json', require('./routes/GestorRegistro'));
 
-
-//Iniciando el servidor, escuchando...
-app.listen(app.get('port'),()=>{
+// Iniciando el servidor, escuchando...
+app.listen(app.get('port'), () => {
     console.log(`Server listening on port ${app.get('port')}`);
 });
-
