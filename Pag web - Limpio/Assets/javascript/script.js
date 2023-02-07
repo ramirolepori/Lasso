@@ -51,7 +51,7 @@ window.onload = () => {
     <td>${key}</td>
     <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].long}</td>
     <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].lat}</td>
-    <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].dateTime}</td>
+    <td>${entrada.ubicaciones[entrada.ubicaciones.length - 1].dateTime.toString().replaceAll("T", " ").split(".", 1)}</td>
     <td><button type="button" class="btn btn-info"
     onclick="window.open('testDelete.html','_blank')">Consultar</button></td>
   `;
