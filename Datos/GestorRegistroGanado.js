@@ -1,4 +1,4 @@
-const data = require('./registroGanado.json');
+const data = require('../Backend/src/registroGanado.json');
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,

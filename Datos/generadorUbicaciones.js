@@ -162,12 +162,12 @@ for (let i = 0; i < ubicaciones.length; i++) {
 // console.log(obtenerDateTimeFormateado());
 
 
-/* let csvString = generarCSVString(lista);
-fs.writeFile('test.csv', csvString, function (err) {
+ let csvString = generarCSVString(lista);
+fs.writeFile('../Backend/src/registroGanado.csv', csvString, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });
- */
+ 
 function convertirFormatoJson(listaUbicaciones) {
     let resultado = {};
     for (let i = 0; i < listaUbicaciones.length; i++) {
