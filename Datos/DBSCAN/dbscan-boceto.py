@@ -63,7 +63,7 @@ def vacas_dbscan(vacas, eps = 0.009, _min_samples = 10):
 
     # Number of clusters in labels, ignoring noise if present.
     n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0) # Por el momento no usamos ésta info
-    n_noise_ = list(labels).count(-1) # Por el momento no usamos ésta info
+    n_noise_ = list(labels).count(-1)                           # Por el momento no usamos ésta info
 
     # Calculamos la cantidad de vacas por cluster
     clusters = dict()
