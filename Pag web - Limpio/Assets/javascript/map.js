@@ -32,7 +32,7 @@ function cargarDatosJSON() {
   const xhr = new XMLHttpRequest();
 
   // Abre una nueva solicitud HTTP GET hacia el archivo JSON
-  xhr.open("GET", "../Datos/registroGanado.json");
+  xhr.open("GET", "http://localhost:3000/registroGanado.json");
   // Especifica qué hacer cuando se recibe la respuesta del servidor
   xhr.onload = function () {
     // Si la solicitud fue exitosa (código HTTP 200)

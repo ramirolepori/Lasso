@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
+    <script src="Assets/javascript/script.js"></script>
+    <script src="https://kit.fontawesome.com/0069fd969c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script src="Assets/javascript/header.js"></script>
+    <script src="Assets/javascript/sidebar.js"></script>
+    <div class="contenedor">
+        <div class="contenido">
+            <!-- Aquí va el contenido del sitio -->
+            <div style="display: flex; flex-direction: column; width: 100%;">
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta inicio">
+                        <button type="button" class="btn btn-info"
+                        onclick="window.open('./testDelete.html','_blank')">Agregar Sensores</button>
+                    </div>
+                    
+                </div>
+                <div class="contenedor-tarjetas">
+                    <div class="tarjeta unaPorLinea">
+                        <div class="tarjeta header">
+                            Sensores
+                        </div>
+                        <div class="tarjeta body">
+                            <div style="display: flex; flex-direction: column; width: 100%;">
+                                <div style="display: flex; margin-top: 3px; margin-bottom: 3px;">
+                                    <label
+                                        style="display: flex; margin-top: 3px; margin-left: 3px; margin-right: auto;">Identificacion:<input
+                                            type="search" placeholder=" Ingrese ID de ganado"
+                                            id="busqueda-historial-alertas"></label>
+                                    <p style="margin-top: 3px; margin-left: 3px">Tipo de aviso:</p>
+                                    <select class="lista-desplegable">
+                                        <option>Todos</option>
+                                        <option>Salud</option>
+                                        <option>Extravío</option>
+                                    </select>
+                                </div>
+                                <div style="display: flex; width: 100%;">
+                                    <!--Datos de tabla-->
+                                    <table class="tabla-personalizada" id="tabla-historial-alertas">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th>ID sensor</th>
+                                            <th>ID vaca</th>
+                                            <th>Longitud</th>
+                                            <th>Latitud</th>
+                                            <th>Fecha y hora</th>
+                                            <th scope="col">Info</th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div style="display: flex; margin-top: 3px; margin-bottom: 3px;">
+                                    <label id="txt-cant-filas"
+                                        style="display: flex; margin-top: 3px; margin-left: 3px; margin-right: auto;">Mostrando
+                                        10 de 15 entradas.</label>
+                                    <!-- botones de paginación aquí -->
+                                    <button id="primeraPagina" class="boton-paginacion">&lt&lt</button>
+                                    <div id="pagination"></div>
+                                    <button id="ultimaPagina" class="boton-paginacion">&gt&gt</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
