@@ -162,8 +162,8 @@ for (let i = 0; i < ubicaciones.length; i++) {
 // console.log(obtenerDateTimeFormateado());
 
 
- let csvString = generarCSVString(lista);
-fs.writeFile('../Backend/src/registroGanado.csv', csvString, function (err) {
+let csvString = generarCSVString(lista);
+fs.writeFile('registroGanado.csv', csvString, function (err) {
     if (err) throw err;
     console.log('Saved!');
 });

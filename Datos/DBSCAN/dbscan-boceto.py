@@ -82,6 +82,6 @@ def vacas_dbscan(vacas, eps = 0.009, _min_samples = 10):
     return clusters, vacas_aisladas # Debería retornar otra estructura de datos
 
 vacas = read_json_file('Datos\\registroGanado.json')
-manadas, vacas_aisladas = vacas_dbscan(vacas, 0.009)
+manadas, vacas_aisladas = vacas_dbscan(vacas, 0.002)
 print("Manadas: ", manadas)
 print("Vacas aisladas: ", vacas_aisladas)
