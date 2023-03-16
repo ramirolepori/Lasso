@@ -133,41 +133,6 @@ function generarCSVString(lista) {
         .join("\n");
 }
 
-/**
- * Usage: Se debe ejecutar el script con 2 argumentos
- * El primero es la cantidad de ubicaciones a generar por vaca
- * El segundo es la cantidad de vacas
- * 
- * Ejemplo: Si los argumentos son 5 y 10, se generarán 5 listas de ubicaciones
- * de 10 vacas cada una.
- * 
- * 
- * El resultado se guarda en 'test.csv'
- */
-
-if (process.argv.length != 4) {
-    console.log("Error! Se necesitan 2 argumentos");
-    exit();
-}
-let n_listas = process.argv[2];
-let n_vacas = process.argv[3];
-
-let ubicaciones = generarUbicaciones(n_listas, n_vacas);
-let lista = [];
-for (let i = 0; i < ubicaciones.length; i++) {
-    // Concatenamos las listas de ubicaciones en una sola lista
-    lista = lista.concat(ubicaciones[i]);
-}
-
-// console.log(obtenerDateTimeFormateado());
-
-
-let csvString = generarCSVString(lista);
-fs.writeFile('registroGanado.csv', csvString, function (err) {
-    if (err) throw err;
-    console.log('Saved!');
-});
- 
 function convertirFormatoJson(listaUbicaciones) {
     let resultado = {};
     for (let i = 0; i < listaUbicaciones.length; i++) {
@@ -196,6 +161,38 @@ function convertirFormatoJson(listaUbicaciones) {
     }
     return resultado;
 }
+
+/**
+ * Usage: Se debe ejecutar el script con 2 argumentos
+ * El primero es la cantidad de ubicaciones a generar por vaca
+ * El segundo es la cantidad de vacas
+ * 
+ * Ejemplo: Si los argumentos son 5 y 10, se generarán 5 listas de ubicaciones
+ * de 10 vacas cada una.
+ * 
+ * 
+ * El resultado se guarda en 'test.csv'
+ */
+
+if (process.argv.length != 4) {
+    console.log("Error! Se necesitan 2 argumentos");
+    exit();
+}
+let n_listas = process.argv[2];
+let n_vacas = process.argv[3];
+
+let ubicaciones = generarUbicaciones(n_listas, n_vacas);
+let lista = [];
+for (let i = 0; i < ubicaciones.length; i++) {
+    // Concatenamos las listas de ubicaciones en una sola lista
+    lista = lista.concat(ubicaciones[i]);
+}
+
+let csvString = generarCSVString(lista);
+fs.writeFile('Datos/registroGanado.csv', csvString, function (err) {
+    if (err) throw err;
+    console.log('Saved!');
+});
 
 const jsonString = JSON.stringify(convertirFormatoJson(lista), null, 4);
 fs.writeFileSync('registroGanado.json', jsonString);
